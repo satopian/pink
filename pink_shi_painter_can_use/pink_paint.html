@@ -501,7 +501,7 @@ function showHideLayer() { //v3.0
 </APPLET-DUMMY>
 </TD><TD class="palette_td">
 <!--(========== 動的パレット制御関連 ==========)-->
-	<TABLE class="palette" CELLPADDING="1" CELLSPACING="0" width=100%><TR><FORM name="Palette">
+	<TABLE class="palette" CELLPADDING="1" CELLSPACING="0"><TR><FORM name="Palette">
 <TD><TABLE class="palette_waku" CELLPADDING="1" CELLSPACING="5" width=100%><TR>
 <TD><FONT SIZE="2"><font face="Impact, Arial Black" color="#666666" size="2">PALETTE</font> <INPUT type="button" VALUE="一時保存" OnClick="PaletteSave()"><br>
 <select name="select" size="{$palsize}" onChange="setPalette()">
@@ -721,25 +721,36 @@ SetTimeCount();
 	<option value="new">新規投稿</option>
        </select>
       <br>
-<!-- <!--{def applet}-->
+<!--( 
+{def applet}
 アプレット
 <select name="shi" class="paint_select">
-  <!--{def usepbbs}-->
+  {def usepbbs}
   <option value="0">PaintBBS</option>
-  <!--{/def}-->
+  {/def}
   <option value=1>しぃペインター</option>
   <option value=2>しぃペインターPro</option>
 </select>
-<!--{/def}--> -->
+{/def}
+)-->
      <!--(// しぃで反映されない上にお絵かき画面でパレット変更できるのでコメント化
 パレット<select name=palette><option value="" selected> デフォルト</option>
 {$palette}
 </select>
 )-->
-<!--{def passflag}-->削除キー
-<!--{/def}-->
-<input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password">
+削除キー<input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password">
+
+<!-- NEOを使う -->
+<!--{ndef ctype_pch}-->
+<label><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
+<!--{/ndef}-->
 <input type="submit" value="続きを描く">
+<!--{def applet}-->
+<input type="hidden" name="shi" value="1">
+<!--{/def}-->
+<!--{ndef applet}-->
+<input type="hidden" name="useneo" value="1">
+<!--{/def}-->
 </form>
 
     <!--(========== コンティニュー説明 ==========)-->
@@ -768,7 +779,7 @@ l(); //LoadCookie
 <div class="copyright">
 <!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- POTI-board -->
 <a href="https://sakots.red/" target="_blank" rel="noopener noreferrer" title="POTI-board {$verlot} (by 赤原文庫)"><b>POTI-board {$ver}</b></a>
-Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="http://stp.sblo.jp/" target="_blank" rel="noopener noreferrer" title="PINK {$tver} (by さとぴあ)"><b>PINK</b></a><br>
+	<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="http://stp.sblo.jp/" target="_blank" rel="noopener noreferrer" title="PINK {$tver} (by さとぴあ)"><b>PINK</b></a></span><br>
 OriginalScript - <a href="http://www.punyu.net/" target="_blank" rel="noopener noreferrer" title="POTI-board v1.32 (by ぷにゅねっと)">POTI-board</a>
 <a href="http://www.2chan.net/" target="_blank" rel="noopener noreferrer" title="futaba.php v0.8 lot.031015 (by ふたば)">futaba.php</a> <a href="http://php.loglog.jp/" target="_blank" rel="noopener noreferrer" title="gazou.php v3.0 (by レッツPHP!)">gazou.php</a><br>
 UseFunction - <span title="HTMLテンプレート v1.3.2 (by PHP開発日誌)">HTMLテンプレート</span>

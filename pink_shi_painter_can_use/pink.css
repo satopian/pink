@@ -11,7 +11,13 @@ body {
 	letter-spacing: 0.09em;
 	word-break: break-all;
 	}
-
+td {
+	color: #666666;
+	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.09em;
+	word-break: break-all;
+}
 
 #body {
 	margin-bottom: 1em;
@@ -113,13 +119,13 @@ a:hover {
 #bbs_title {
 	font-size: 18px;
 	font-weight: bold;
-	line-height: 100%;
+	line-height: 120%;
 	text-align: left;
 	max-width: 928px;
 	border-bottom-style: dashed;
 	border-bottom-color: #888888;
 	border-bottom-width: 1px;
-/*	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;*/
+	/*	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;*/
 	color: #8a8a8a;
 	margin: 10px auto 15px auto;
 	}
@@ -129,7 +135,6 @@ a:hover {
 .menu_home_wrap {
 	display: inline-block;
 }
-
 #head_menu_wrap {
 	margin: 4px auto;
 	}
@@ -256,7 +261,7 @@ a:hover {
 	}
 /* コメント欄の幅 */
 
-@media screen and (min-width: 481px){
+@media screen and (min-width: 500px){
 
 #post_table {
 	border-collapse: collapse;
@@ -276,7 +281,7 @@ a:hover {
 	}
 	}
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 499px){
 #post_table {
 	border-collapse: collapse;
 	text-align: left;
@@ -813,6 +818,7 @@ text-align:center;
 .palette {
 	margin-left: 10px;
 	background-color: #FFB5E6;
+	width: 162px;
 }
 .palette_gradation {
 	margin-left: 10px;
@@ -959,9 +965,7 @@ td.palette_td {
 	display: none;
 }
 }
-.thread .article_info_name {/*	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;*/
-	padding-right: 6px;font-size: 15px;color: #808080;
-	/* margin: -2px 0; */}
+.thread .article_info_name {/*	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;*/padding-right: 6px;font-size: 15px;color: #808080;/* margin: -2px 0; */}
 /* メールのリンク下線の色と不透明度 */
 .thread .article_info_name a:link {
 	text-decoration-color: #6666668a;
@@ -1021,7 +1025,19 @@ td.palette_td {
 
 
 .pch_download {
-    text-align: center;
-    margin: 10px 0 0 0;
-    line-height: 1.8em;
+	text-align: center;
+	margin: 10px 0 0 0;
+	line-height: 1.8em;
+}
+span.howtoedit {
+	display: inline-block;
+}
+@media screen and (max-width: 413px) {
+/* 413px以下の幅の場合に適用される */
+span.howtoedit {
+	margin: 8px 0 3px;
+}
+}
+.webstyle_wrap{
+	display: inline-block;
 }
