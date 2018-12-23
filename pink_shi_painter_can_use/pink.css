@@ -1,0 +1,1027 @@
+@charset "utf-8";
+
+/* 全体設定 */
+body {
+	color: #666666;
+	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;
+	font-size: 14px;
+	background-color: #FFD7F0;
+	margin: 0 10.5px;
+	padding: 1px 0;
+	letter-spacing: 0.09em;
+	word-break: break-all;
+	}
+
+
+#body {
+	margin-bottom: 1em;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	}
+ul {
+	padding: 0;
+	margin:  0;
+	font-size: 14px;
+}
+li {
+	padding: 0;
+	margin: 0 0 0 1.5em;
+	}
+hr {
+	display: block;
+	height: 1px;
+	border-top-width: 1px;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-top-style: dashed;
+	border-top-color: #888888;
+	margin: 0;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	padding: 0;
+	}
+
+img{border-style:none}
+input[type="text"] , input[type="submit"] , input[type="password"] , input[type="reset"] {
+	border: 1px #686868 solid;
+	background-color: #FFFEFF;
+	-webkit-appearance: none;
+	border-radius: 0;
+	margin: 1px;
+	color: #666666;
+	}
+input[type="submit"], input[type="reset"] {
+	border: 1px solid #686868;
+	color: #666666;
+	background-color: #FFFEFF;
+	font-size:  13px;
+	}
+
+textarea {
+	border: 1px solid #555555;
+	-webkit-appearance: none;
+	border-radius: 0;
+	line-height:  110%;
+	}
+input[type="file"] {
+	border: none;
+	background-color: transparent;
+	}
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 1000px white inset;
+	}
+select{
+	border-radius: 0;
+	background-color: #FFFEFF;
+	border: 1px #686868 solid;
+	color: #666666;
+	font-size:  13px;
+	}
+.nk {
+	white-space: nowrap;
+	}
+.centering{
+	margin: 0 auto;
+	text-align: center;
+	}
+
+/* リンクの色 */
+a {
+ text-decoration : none;
+ }
+a:link{
+	color: #6f6f6f;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+}
+a:visited {
+	color: #6f6f6f;
+}
+a:hover {
+	color: #6f6f6f;
+	text-decoration: none;
+}
+
+/* リンクのフォーカスを表示しない */
+
+.posted_image a:focus {
+	outline: none;
+}
+
+/* ヘッダー */
+#bbs_title {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 100%;
+	text-align: left;
+	max-width: 928px;
+	border-bottom-style: dashed;
+	border-bottom-color: #888888;
+	border-bottom-width: 1px;
+/*	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;*/
+	color: #8a8a8a;
+	margin: 10px auto 15px auto;
+	}
+.title_name_wrap {
+	display: inline-block;
+}
+.menu_home_wrap {
+	display: inline-block;
+}
+
+#head_menu_wrap {
+	margin: 4px auto;
+	}
+#head_menu {
+	max-width: 928px;
+	padding: 1px;
+	text-align: left;
+	font-size: 14px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 15px;
+	margin-left: auto;
+	}
+#main_head_menu {
+	max-width: 928px;
+	padding: 1px;
+	text-align: left;
+	font-size: 14px;
+	margin: 0 auto;
+}
+
+/* メニュー */
+.bbsmenu {
+	margin-bottom: 12px;
+	float: left;
+	width: auto;
+}
+.res_bbsmenu {
+	float: left;
+	width: auto;
+}
+.menu_pr {
+	float: right;
+	margin-bottom: 12px;
+	width: auto;
+}
+.res_menu_pr {
+	float: right;
+	width: auto;
+}
+.clear {
+	clear: both;
+}
+/* フォーム */
+#paint_form_wrap {
+	margin: 1px;
+	}
+#paint_form {
+	text-align: left;
+	margin-left: auto;
+	max-width: 928px;
+	margin-right: auto;
+	}
+/* .anime_checkbox {
+	display: none;
+} */
+@media screen and (max-width: 420px) {
+/* 420px以下の幅の場合に適用される */
+.use_animation {
+	display: none;
+}
+}
+
+#post_form {
+	margin: 3px auto;
+	padding: 1px 0;
+	}
+#self2 {
+	text-align: left;
+	max-width: 928px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#post_table input {
+	background-color: #FFFEFF;
+	border: 1px solid #686868;
+	color: #555555;
+}
+.margin_radio {
+	margin-bottom: 15px;
+}
+
+
+#post_table td {
+	padding: 2px;
+	}
+.post_table_title {
+	width: 5.5em;
+	}
+.td_noborder {
+	border: none;
+	}
+.post_input_text {
+	width: 210px;
+	color: #555555;
+	height: 16px;
+	padding: 1px;
+	}
+.post_input_pass {
+	width: 10em;
+	height: 16px;
+	padding: 1px;
+	color: #666666;
+	}
+.post_table_submit {
+	height: 2em;
+	}
+.post_submit {
+	height: 2em;
+	width: 8em;
+	font-size:  13px;
+	}
+#post_table select {
+	color: #666666;
+	height: 20px;
+	padding: 1px;
+}
+
+
+#up_desc li {
+	list-style-type: square;
+	}
+/* コメント欄の幅 */
+
+@media screen and (min-width: 481px){
+
+#post_table {
+	border-collapse: collapse;
+	text-align: left;
+	/* margin-top: 12px; */
+	margin-right: auto;
+	/* margin-bottom: 0; */
+	margin-left: auto;
+	/* width: 430px; */
+	}
+.post_input_com {
+	color: #555555;
+	height: 6.2em;
+	border: 1px #686868 solid;
+	width: 338px;
+	padding: 1px;
+	}
+	}
+
+@media screen and (max-width: 480px){
+#post_table {
+	border-collapse: collapse;
+	text-align: left;
+	margin-top: 12px;
+	margin-bottom: 0;
+	width: 100%;
+	line-height:  1em;
+	}
+#post_table td {
+		display: block;
+		width: 100%;
+		border: none;
+	}
+.post_input_com {
+	color: #555555;
+	height: 6.2em;
+	border: 1px #686868 solid;
+	width: 98%;
+	padding: 1px;
+	}
+	}
+
+/* 親記事 */
+.thread {
+	max-width: 928px;
+	margin: 1px auto 1px;
+	text-align: left;
+	padding: 0;
+	}
+.article_title {
+	font-size: 16px;
+	line-height: 110%;
+	background-color: #FFB5E6;
+	font-weight: bold;
+	border-bottom-style: dashed;
+	border-left-style: solid;
+	border-color: #8a8a8a;
+	text-align: left;
+	margin: 0 0 6px;
+	/*	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;*/
+	color: #888888;
+	border-width: 0 0 1px 8px;
+	padding:  6px 0 2px 5px;
+	margin: 0 0 8px;
+	}
+.article_title a {
+	display: block;
+	color: #888888;
+	text-decoration: none;
+	}
+.article_info {
+	padding: 0;
+	text-align: left;
+	font-size:  14px;
+	margin: 5px 0 5px;
+	}
+.article_info_desc {
+	padding-right: 4px;
+	white-space: nowrap;
+	}
+.article_info_painttime {
+	padding-right: 3px;
+	white-space: nowrap;
+	}
+.article_info_continue {
+	padding-right:  1px;
+}
+.article_info_animation {
+	padding-left:  0; 
+}
+.article_img_info{
+	/* font-size: 13px; */
+	margin-top: 2px;
+	text-align: left;
+	margin-bottom: 12px;
+	}
+.res_article_img_info{
+	font-size: 13px;
+	margin-top: 2px;
+	text-align: left;
+	margin-bottom: 8px;
+	}
+
+/* comment */
+
+.thread .comment {
+	margin: 0 0 12px;
+	display: table;
+	min-width:200px;
+	line-height: 160%;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+}
+
+/* img max-width */
+@media screen and (max-width: 899px) {
+/* 899px以下の幅の場合に適用される */
+	.posted_image img {
+		max-width: 100%;
+		height: auto;
+		}
+	.posted_img_form img  {
+		max-width: 100%;
+		height: auto;
+		}
+	
+	.continue_img img {
+		max-width: 100%;
+		height: auto;
+		}
+		}
+
+.article_limit {
+	font-weight: bold;
+	text-align: right;
+	color: #ff88cc;
+	}
+.article_skipres {
+	text-align: right;
+	}
+
+/* レス */
+.res_article_wrap {
+	display: table;
+	font-size: 14px;
+	}
+.res_article_title {
+	/* border-left-color: #666666; */
+	margin-top: 6px;
+	}
+.res_button_wrap {
+	text-align: right;
+	margin: 0 0 8px;
+	}
+.res_button{
+	width:6em;
+	height: 2em;
+	}
+.res_button_wrap form {
+	display: inline-block;
+	margin: 0;
+}
+.share_button {
+	display: inline-block;
+	margin: 0 3px -1px;
+	vertical-align: bottom;
+	font-size: 15px;
+}
+.icon-twitter {
+	display: inline-block;
+	padding: 0 2px;
+}
+.icon-facebook2 {
+	display: inline-block;
+	padding: 0 2px;
+}
+.page_top {
+	display: inline-block;
+	margin: 0 3px 0px;
+	vertical-align: bottom;
+}
+/* ミニレスフォーム */
+.minires_wrap{
+	max-width: 500px;
+	text-align: right;
+	margin-left: auto;
+	}
+.minres_form_table {
+	width: 100%;
+	max-width: 500px;
+	text-align: right;
+	}
+.minres_title {
+	width: 6em;
+	}
+.minres_input_text {
+	width: 100%;
+	color: #555555;
+	height: 16px;
+	padding: 1px;
+	}
+.minres_input_com {
+	width: 100%;
+	height: 3em;
+	color: #555555;
+	padding: 1px;
+	}
+.minres_input_other {
+	width: 10em;
+	height: 16px;
+	padding: 1px;
+	}
+.color_select {
+	background-color: #FFFEFF;
+	color: #666666;
+	}
+@media screen and (max-width: 600px){
+	.minres_form_table td {
+		display: block;
+		width: 100%;
+	}
+	}
+
+/* ページリンク */
+.pagelink {
+	text-align: center;
+	max-width: 928px;
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	}
+#paging_wrap {
+	margin-bottom: 0.5em;
+	line-height: 28px;
+	text-align: center;
+	}
+#paging_wrap .page_number {
+
+	padding-right: 2px;
+	padding-left: 2px;
+	}
+#paging_wrap .parentheses {
+	padding-right: 2px;
+	padding-left: 2px;
+	display: inline-block;
+	}
+
+.pagelink_prev , .pagelink_top , .pagelink_next {
+	display: inline-block;
+	position: relative;
+	padding: 0;
+	}
+.pagelink_prev a , .pagelink_top a , .pagelink_next a {
+	display: inline-block;
+	padding: 2px 3px;
+	}
+.pagelink_prev {
+	text-align: right;
+	width: 72px;
+	margin: 1px 0;
+	}
+.pagelink_prev a {
+	padding-left: 14px;
+	}
+
+.pagelink_top {
+	text-align: center;
+	border-left: 1px solid #666666;
+	border-right: 1px solid #666666;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin: 1px 0;
+}
+.pagelink_next {
+	text-align: left;
+	width: 72px;
+	margin: 1px 0;
+}
+.pagelink_next a {
+	padding-right: 14px;
+	}
+
+/* 記事メンテナンス */
+.mente_wrap {
+	text-align: center;
+/*	vertical-align: middle;*/
+	margin: 1em;
+	}
+.mente_wrap .edit_number {
+	color: #666666;
+	height: 16px;
+	vertical-align: middle;
+	margin: 0 2px;
+	width: 60px;
+	border:  1px #686868 solid;
+}
+.mente_wrap .edit_password {
+	color: #666666;
+	height: 16px;
+	vertical-align: middle;
+	margin: 0 2px;
+	padding: 1px;
+}
+.mente_wrap select {
+	font-size: 13px;
+	color: #666666;
+	height: 21px;
+	padding: 0 0 0 2px;
+	vertical-align: middle;
+}
+.mente_wrap input[type="submit"] {
+	font-size: 13px;
+	height: 21px;
+	vertical-align: middle;
+}
+
+/* 著作権表示 */
+.copyright {
+	text-align: center;
+	margin-top: 14px;
+	margin-right: 10px;
+	margin-bottom: 14px;
+	margin-left: 10px;
+	}
+
+/* カタログ表示 */
+.catalog_desc_wrap {
+	/* text-align: center; */
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 747px;
+	}
+@media screen and (max-width: 767px) {
+/* 767px以下の幅の場合に適用される */
+.catalog_desc_wrap {
+	text-align: center; 
+	width: auto;
+}
+}
+
+.catalog_wrap {
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: top;
+	width: 235px;
+	height: 290px;
+	border: 1px solid #8a8a8a;
+	padding: 4px;
+	margin: 2px;
+	line-height: 138%;
+	}
+.catalog_title {
+	line-height: 110%;
+	text-align: left;
+	background-color: #FFB5E6;
+	font-weight: bold;
+	margin-bottom: 1px;
+	letter-spacing: 0.05em;
+	color: #8a8a8a;
+	}
+.catalog_title a {
+	display: block;
+	word-break:break-all;
+	color: #8a8a8a;
+	padding: 5px 4px;
+	text-decoration: none;
+	}
+.catalog_title a:hover {
+	display: block;
+	color: #666666;
+	text-decoration: none;
+	}
+.catalog_name {
+	text-align: left;
+	margin: 2px 0 0;
+	}
+.catalog_time {
+	text-align: left;
+	margin: 0 0 4px;
+	}
+.catalog_img{
+	width: 99%;
+	height: 198px;
+	}
+.catalog_img img{
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+	margin:  0 auto;
+	display:  block;
+	}
+.no_article { 
+	height: 0;
+	border: none;
+	padding: 0 4px;
+	}
+.catalog_noimg a {
+	display: block;
+	padding: 8px 4px;
+	}
+.catalog_noimg a:hover {
+	display: block;
+	padding: 8px 4px;
+	}
+
+/* お絵かきモード */
+
+
+#paint_main {
+	text-align: center;
+	}
+.paint_table{ 
+	margin: 0 auto;
+	}
+.paint_td {
+	vertical-align: top;
+}
+
+.paint_password {
+	color: #666666;
+	padding: 0 1px;
+	height: 16px;
+	padding: 1px;
+}
+.paint_select {
+	color: #666666;
+	height: 21px;
+/*	padding: 1px;*/
+}
+/*
+#mode_head {
+	max-width:  928px;
+	margin:  0 auto;
+}
+*/
+.pch_animation {
+	text-align:  center;
+}
+/* 管理モード */
+.admindel_table {
+text-align:center;
+}
+@media screen and (min-width: 960px) {
+/* 960px以上の幅の場合に適用される */
+.admindel_table {
+	border-collapse: collapse;
+	width: 928px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	}
+	}
+
+@media screen and (max-width: 959px) {
+/* 959px以下の幅の場合に適用される */
+.admindel_table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	}
+	}
+
+@media screen and (min-width: 560px) {
+/* 560px以上の幅の場合に適用される */
+.nobreak{
+	white-space: nowrap;
+	}
+	}
+
+@media screen and (max-width: 767px) {
+/* 767px以下の幅の場合に適用される */
+.column_non{
+	display:none;
+	}
+	}
+
+.hensyu {
+	font-weight: bold;
+	color: #ff88cc;
+	}
+.admindel_table tr {
+	height: 2.5em;
+	}
+.admindel_table td , .admindel_table th{
+	border: 1px solid #8a8a8a;
+	padding: 2px;
+	}
+.delcheck label {
+	vertical-align: middle;
+	}
+.error_mesage {
+	line-height: 200%;
+	text-align: center;
+	font-size: 30px;
+	color: #ff88cc;
+	max-width: 928px;
+	margin-top: 1em;
+	margin-right: auto;
+	margin-bottom: 1em;
+	margin-left: auto;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: dashed;
+	border-bottom-style: dashed;
+	border-top-color: #666666;
+	border-bottom-color: #666666;
+	}
+
+.adminpass {
+	height: 18px;
+	padding: 1px;
+}
+.admin_submit {
+	height: 23px;
+}
+
+
+#res_head_menu {
+
+	max-width: 928px;
+	padding: 1px;
+	text-align: left;
+	font-size: 14px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 15px;
+	margin-left: auto;
+}
+.howtopaint {
+	max-width: 928px;
+	text-align: left;
+	margin: 15px auto 15px;
+}
+.applet {
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+.continue_img {
+	max-width: 928px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/* 動的パレットの位置と装飾 */
+.palette {
+	margin-left: 10px;
+	background-color: #FFB5E6;
+}
+.palette_gradation {
+	margin-left: 10px;
+}
+.palette .palette_waku {
+	border: 1px solid #666666;
+}
+.palette input {
+	color: #555555;
+	background-color: #FFFEFF;
+	border: 1px solid #686868;
+}
+.palette_gradation input {
+	color: #555555;
+	background-color: #FFFEFF;
+	border: 1px solid #686868;
+}
+td.palette_td {
+	text-align:  left;
+	vertical-align: middle;
+}
+.palette_hr {
+	border: none;
+}
+/* ペイント画面ペイントタイム */
+.applet_painttime {
+	margin-top: 15px;
+}
+.continue_painttime {
+	margin: 0 0 8px;
+}
+/* 掲示板の説明文 */
+.howtouse {
+	font-size: 14px;
+	text-align: left;
+	max-width: 928px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+/*  続から描く説明文 */
+.howtocontinue {
+	margin: 15px auto 8px;
+	display: table;
+	text-align: left;
+}
+
+/* レス書き込みの説明 */
+.howtowrite {
+	list-style-type: square;
+	margin-top: 6px;
+}
+
+
+/* ペイント画面の説明文 */
+.paintbbs_memo {
+	margin: 18px auto 18px;
+	font-size: 14px;
+	line-height: 146%;
+	color: #666666;
+	text-align: left;
+	min-width:180px;
+	max-width:768px;
+}
+
+.paintbbs_memo li {
+	list-style-type: circle;
+}
+.paintbbs_memo div {
+	margin-bottom: 15px;
+}
+
+.margin_resbutton {
+	margin-bottom: 6px;
+}
+.margin_resbutton_res {
+	margin: 5px 0;
+}
+.continue_img img {
+	margin: 3px 0 6px;
+}
+.posted_img_form img {
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.posted_img_form {
+
+	max-width: 928px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* 画像とコメントの位置 */
+@media screen and (min-width: 768px) {
+/* 768px以上の幅の場合に適用される */
+
+.thread .posted_image {
+	float: left;
+	margin-right: 0;
+	margin-bottom: 12px;
+}
+.thread .posted_image img {
+	margin-right: 12px;
+}
+}
+@media screen and (max-width: 767px) {
+/* 767px以下の幅の場合に適用される */
+
+.thread .posted_image {
+	margin-right: 0;
+	margin-bottom: 12px;
+}
+}
+/* スマートフォンには表示しない */
+@media screen and (max-width: 555px) {
+/* 555px以下の幅の場合に適用される */
+.menu_pr {
+	display: none;
+}
+.res_menu_pr {
+	display: none;
+}
+
+/*
+#res_paint_form {
+	display: none;
+	}
+*/
+.howtopaint {
+	display: none;
+}
+.txtnon {
+	display: none;
+}
+	.article_info_painttime {
+	display: none;
+}
+}
+@media screen and (max-width: 510px) {
+/* 510px以下の幅の場合に適用される */
+.neo_checknon {
+	display: none;
+}
+}
+.thread .article_info_name {/*	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;*/
+	padding-right: 6px;font-size: 15px;color: #808080;
+	/* margin: -2px 0; */}
+/* メールのリンク下線の色と不透明度 */
+.thread .article_info_name a:link {
+	text-decoration-color: #6666668a;
+	color: #8a8a8a;
+}
+.thread .article_info_name a:visited {
+	text-decoration-color: #6666668a;
+}
+
+.use_neo {
+	font-weight: bold;
+	color: #808080;
+}
+.use_animation {
+	font-weight: bold;
+	color: #808080;
+}
+.potitag_mode {
+	width: 96%;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* ペイントボタン */
+.paint_button {
+	width: 78px;
+	height: 25px;
+}
+.select_applet {
+	height: 25px;
+}
+.canvas_size {
+/*	font-family: "Hiragino Sans",meiryo,"ヒラギノ角ゴシック",メイリオ,sans-serif;*/
+	font-weight: bold;
+	color: #808080;
+}
+.canvas_select {
+	width: 48px;
+	height: 25px;
+	text-align: initial;
+	letter-spacing: 0;
+}
+#res_paint_form {
+	text-align: center;
+	margin-left: auto;
+	max-width: 928px;
+	margin-right: auto;
+	margin-top: 20px;
+}
+/* レスお絵かき時の画像なしのチェックボックス */
+#post_table .res_textonly_display_non {
+	display: none;
+}
+#post_table .post_select_image {
+	height: 20px;
+	padding:1px 3px 1px 1px;
+}
+
+
+.pch_download {
+    text-align: center;
+    margin: 10px 0 0 0;
+    line-height: 1.8em;
+}
