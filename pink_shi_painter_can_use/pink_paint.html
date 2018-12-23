@@ -9,7 +9,7 @@
 <head>
 <meta charset="{$charset}">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-<link rel="stylesheet" href="pink.css">
+<link rel="stylesheet" type="text/css" href="pink.css">
 <title><!--{def paint_mode}-->お絵かきモード<!--{/def}--><!--{def continue_mode}-->続きを描く<!--{/def}--><!--{def pch_mode}-->動画表示モード<!--{/def}--> - {$title}</title>
 <!--(
 // title…掲示板タイトル
@@ -26,17 +26,36 @@ document.paintBBSCallback = function (str) {
 	}
 	}
 </script>
-<!--{def paint_mode}-->
-<link rel="stylesheet" href="neo.css" type="text/css" />
-<script src="neo.js" charset="UTF-8"></script>
+
+<!--{def useneo}-->
+<link rel="stylesheet" href="/neo/PaintBBS-1.5.1.css" type="text/css" />
+<script src="/neo/PaintBBS-1.5.1.js" charset="UTF-8"></script>
 <!--{/def}-->
 <!--{def paintbbs}-->
 <!--{def pch_mode}-->
-<link rel="stylesheet" href="neo.css" type="text/css" />
-<script src="neo.js" charset="UTF-8"></script>
+<link rel="stylesheet" href="/neo/PaintBBS-1.5.1.css" type="text/css" />
+<script src="/neo/PaintBBS-1.5.1.js" charset="UTF-8"></script>
 <!--{/def}-->
 <!--{/def}-->
 
+<!-- Javaが使えるかどうか判定 -->
+<!--{ndef paintbbs}-->
+<!--(
+<script>
+function cheerpJLoad() {
+var jEnabled = navigator.javaEnabled();
+if(!jEnabled){
+var sN = document.createElement("script");
+sN.src = "https://cjrtnc.leaningtech.com/20181126/loader.js";
+var s0 = document.getElementsByTagName("script")[0];
+s0.parentNode.insertBefore(sN, s0);
+sN.addEventListener("load", function(){ cheerpjInit(); }, false);
+}
+}
+window.addEventListener("load", function() { cheerpJLoad(); }, false);
+</script>
+)-->
+<!--{/ndef}-->
 </head>
 <body>
 <div id="body">
@@ -428,7 +447,8 @@ function showHideLayer() { //v3.0
 <!--(========== PaintBBS個別設定 ==========)-->
 <!--{def paintbbs}-->
 <!-- NEOを使う時はアプレットを読み込まないように -->
-<APPLET-DUMMY
+<!--{def useneo}--><APPLET-DUMMY <!--{/def}-->
+<!--{ndef useneo}--><APPLET<!--{/ndef}-->
  CODE="pbbs.PaintBBS.class" ARCHIVE="./PaintBBS.jar" NAME="paintbbs" WIDTH="{$w}" HEIGHT="{$h}" MAYSCRIPT>
 <!--{/def}-->
 <!--(========== しぃペインター個別設定 ==========)-->
@@ -498,7 +518,7 @@ function showHideLayer() { //v3.0
 <!--{def cpal}--><!--{each cpal}-->
 <param name="color_{$cpal/no}" value="#{$cpal/pal}">
 <!--{/each}--><!--{/def}-->
-</APPLET-DUMMY>
+</APPLET>
 </TD><TD class="palette_td">
 <!--(========== 動的パレット制御関連 ==========)-->
 	<TABLE class="palette" CELLPADDING="1" CELLSPACING="0"><TR><FORM name="Palette">
@@ -563,7 +583,6 @@ function showHideLayer() { //v3.0
 <option>14</option>
 </SELECT><input type="text" name="ped" size="8" onKeyPress="Chenge_()" onChange="Chenge_()"><div id=psft style="position:absolute;width:100px;height:30px;z-index:1;left:5px;top:10px;"></div>
 </TD></TR></TABLE></TD></FORM></TR></TABLE>
-<center><A href="http://wondercatstudio.com/" target="_blank" rel="noopener noreferrer" title="WonderCatStudio"><small>DynamicPalette<br>(C)のらネコ</small></A></center>
 </TD></TR></TABLE>
 <Script Language="JavaScript">
 <!--
@@ -609,6 +628,7 @@ SetTimeCount();
 </div>
 <!--(========== 描画時間動的表示 ここまで ==========)-->
 <p><!--{def anime}-->★描画アニメ記録中★<!--{/def}--></p>
+
 <!--(========== お絵かき設定値の再設定関連 ==========)-->
 <!--(========== お絵かき設定値の再設定関連 ここまで ==========)-->
 <a href="{$self}?mode=piccom<!--{def resno}-->&resto={$resno}<!--{/def}-->">アップロード途中の画像</a>
@@ -631,8 +651,8 @@ SetTimeCount();
 // speed…動画再生スピード初期値
 // datasize…動画ファイルサイズ(Byte)
 )-->
+<!--(<div id="mode_head">動画表示モード</div>)-->
 <!--{def pch_mode}-->
-<!--<div id="mode_head">動画表示モード</div>-->
 	</header>
 <div class="pch_animation">
 <!--{def paintbbs}-->
@@ -650,21 +670,24 @@ SetTimeCount();
 <param name="speed" value="{$speed}">
 <param name="buffer_progress" value="false">
 <param name="buffer_canvas" value="false">
-<!--
+<!--(
 <param name="color_back" value="#FFFFFF">
 <param name="color_text" value="#333333">
 <param name="color_icon" value="#FFFFFF">
 <param name="color_bar" value="#AAAAAA">
 <param name="color_bar_select" value="#999999">
 <param name="color_frame" value="#666666">
--->
+)-->
 </APPLET>
 </div>
 <div class="pch_download">
 <A href="{$pchfile}" target="_blank" rel="noopener noreferrer">Download</A><br>
 <small>Datasize : {$datasize} byte</small><br>
+	
 	<a href="{$self2}">{$title}</a> / <a href="javascript:close()">閉じる</a>
 </div>
+
+
 <!--{/def}-->
 <!--(========== 動画表示モード ここまで ==========)-->
 <!--(========== コンティニューモード ==========
@@ -686,22 +709,24 @@ SetTimeCount();
 // usepbbs…しぃペインターとPaintBBSの両方が使用できるとき true が入る
 // palette…パレット選択用データ(selectタグ用option配列)
 // passflag…削除キー入力を促す場合 true が入る
-// newpost_nopassword…新規投稿で削除キー不要の時 true  が入る
 )-->
 <!--{def continue_mode}-->
 <nav>
 <div id="self2"> 
 [<a href="{$self2}">{$title}</a>]
- </div>
+</div>
 </nav>
 </header>
 
 
-  <div class="centering">
+ 	<div class="centering">
     <!--(========== クッキー読込み用JavaScript(必須) ==========)-->
     <Script language="JavaScript" src="loadcookie.js"></script>
     <!--(========== 画像と描画時間 ==========)-->
-    <div class="continue_img"><img src="{$picfile}" border="0" width="{$picw}" height="{$pich}" alt="{$picw}x{$pich}" title="{$picw}x{$pich}"></div>
+ 	<div class="continue_img"><a href="{$self}?res={$no}">
+<img src="{$picfile}" border="0" width="{$picw}" height="{$pich}" alt="{$picw}x{$pich} {$title}" title="{$picw}x{$pich} {$title}">
+</a>
+   </div>
     <div class="continue_painttime"><!--{def painttime}-->描画時間：{$painttime}<!--{/def}--></div>
     <!--(========== コンティニューフォーム欄 ==========)-->
     <form action="{$self}" method="post">
@@ -716,24 +741,24 @@ SetTimeCount();
         <!--{def ctype_pch}--><option value="pch">動画より続きを描く</option><!--{/def}-->
         <!--{def ctype_img}--><option value="img">画像より続きを描く</option><!--{/def}-->
       </select>
-      画像は<select name="type" class="paint_select">
+      画像は <select name="type" class="paint_select">
 	<option value="rep">差し換え</option>
 	<option value="new">新規投稿</option>
        </select>
       <br>
-<!--( 
+
+<!--(//コメントアウト
 {def applet}
-アプレット
-<select name="shi" class="paint_select">
-  {def usepbbs}
-  <option value="0">PaintBBS</option>
-  {/def}
-  <option value=1>しぃペインター</option>
-  <option value=2>しぃペインターPro</option>
+アプレット<select name="shi" class="paint_select">
+{def usepbbs}
+<option value="0">PaintBBS</option>
+{/def}
+<option value=1>しぃペインター</option>
+<option value=2>しぃペインターPro</option> 
 </select>
 {/def}
 )-->
-     <!--(// しぃで反映されない上にお絵かき画面でパレット変更できるのでコメント化
+<!--(// しぃで反映されない上にお絵かき画面でパレット変更できるのでコメント化
 パレット<select name=palette><option value="" selected> デフォルト</option>
 {$palette}
 </select>
@@ -754,20 +779,17 @@ SetTimeCount();
 </form>
 
     <!--(========== コンティニュー説明 ==========)-->
-      <div class="howtocontinue">
-      <ul id="up_desc">
-
-    <!--{def passflag}-->
+    <div class="howtocontinue">
+           <ul id="up_desc">
     <!--{def newpost_nopassword}-->
 	<li>新規投稿なら削除キーがなくても続きを描く事ができます。</li>
     <!--{/def}-->
     <!--{ndef newpost_nopassword}-->
-	<li>続きを描くには描いたときの削除キーが必要です。</li>
+        <li>続きを描くには描いたときの削除キーが必要です。</li>
     <!--{/ndef}-->
-    <!--{/def}-->
-        {$addinfo}
+<!--({$addinfo})-->
         </ul>
-        </div>
+    </div>
     <!--(========== JavaScriptの実行(クッキーを読込み、フォームに値をセット) ==========)-->
     <script language="JavaScript"><!--
 l(); //LoadCookie
@@ -779,17 +801,21 @@ l(); //LoadCookie
 <div class="copyright">
 <!-- GazouBBS v3.0 --><!-- ふたば改0.8 --><!-- POTI-board -->
 <a href="https://sakots.red/" target="_blank" rel="noopener noreferrer" title="POTI-board {$verlot} (by 赤原文庫)"><b>POTI-board {$ver}</b></a>
-	<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="http://stp.sblo.jp/" target="_blank" rel="noopener noreferrer" title="PINK {$tver} (by さとぴあ)"><b>PINK</b></a></span><br>
+<span class="webstyle_wrap">Web Style by <a href="https://draclaw.com/" target="_blank" rel="noopener noreferrer" title="Cool Solid (by ドラ☆クロウ！)"><b>Cool Solid</b></a> &amp; <a href="http://stp.sblo.jp/" target="_blank" rel="noopener noreferrer" title="PINK {$tver} (by さとぴあ)"><b>PINK</b></a></span><br>
 OriginalScript - <a href="http://www.punyu.net/" target="_blank" rel="noopener noreferrer" title="POTI-board v1.32 (by ぷにゅねっと)">POTI-board</a>
-<a href="http://www.2chan.net/" target="_blank" rel="noopener noreferrer" title="futaba.php v0.8 lot.031015 (by ふたば)">futaba.php</a> <a href="http://php.loglog.jp/" target="_blank" rel="noopener noreferrer" title="gazou.php v3.0 (by レッツPHP!)">gazou.php</a><br>
+<a href="https://www.2chan.net/" target="_blank" rel="noopener noreferrer  nofollow" title="futaba.php v0.8 lot.031015 (by ふたば)">futaba.php</a> <a href="http://php.loglog.jp/" target="_blank" rel="noopener noreferrer" title="gazou.php v3.0 (by レッツPHP!)">gazou.php</a><br>
+<!--{def paint}-->
+OekakiApplet - <a href="http://hp.vector.co.jp/authors/VA016309/" target="_blank" rel="noopener noreferrer" title="by しぃちゃん">PaintBBS</a>
+<!--(<a href="http://hp.vector.co.jp/authors/VA016309/" target="_blank" rel="noopener noreferrer" title="by しぃちゃん">しぃペインター</a>)-->
+<br>
+<!--{/def}-->
 UseFunction - <span title="HTMLテンプレート v1.3.2 (by PHP開発日誌)">HTMLテンプレート</span>
 <!--http://hoover.ktplan.ne.jp/kaihatsu/php/-->
 ，<span title="by WonderCatStudio">動的パレットスクリプト</span>
 <!--http://wondercatstudio.com/-->
 ，<a href="http://github.com/funige/neo/" target="_blank" rel="noopener noreferrer" title="by funige">PaintBBS NEO</a>
 </div>
-
 </footer>
-
 </div>
-</body></html>
+</body>
+</html>

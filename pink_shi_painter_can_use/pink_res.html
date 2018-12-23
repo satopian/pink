@@ -214,13 +214,19 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 <form action="{$self}" method="post">
 <!--(========== お絵かきアプレット ==========)-->
 <input name="submit" type="submit" value="PAINT" class="paint_button">
-<!-- <!--{def applet}-->
+<!-- しぃペインター通常版 -->
+<input type="hidden" name="shi" value="1">
+<!--(
+{def applet}
 <select name="shi" class="select_applet">
-<!--{def usepbbs}--><option value="0">PaintBBS</option><!--{/def}-->
+{def usepbbs}
+<option value="0">PaintBBS</option>
+{/def}
 <option value="1">しぃペインター</option>
 <option value="2">しぃペインターPro</option>
 </select>
-<!--{/def}--> -->
+{/def}
+)-->
 <!--(// しぃで反映されない上にお絵かき画面でパレット変更できるのでコメント化
 パレット<select name=palette><option value="" selected> デフォルト</option>
 {$palette}
@@ -248,18 +254,15 @@ x
 	<option value="500">500</option>
 </select>&nbsp;
 <!--/CANVAS_SELECT-->
-<!-- <span class="nk">横:<input type="text" name="picw" value="{$pdefw}" size="3">縦:<input type="text" name="pich" value="{$pdefh}" size="3"></span> -->
+<!--( <span class="nk">横:<input type="text" name="picw" value="{$pdefw}" size="3">縦:<input type="text" name="pich" value="{$pdefh}" size="3"></span> )-->
 <!--(
 // pdefw…お絵かきデフォルトサイズ(横)
 // pdefh…お絵かきデフォルトサイズ(縦)
 )-->
-<!-- <span class="nk">保存タイプ<select name="savetype">
-<option value="PNG">PNG</option>
-<option value="JPEG">JPEG</option>
-<option value="AUTO">AUTO</option>
-</select></span>
- -->
-
+<span class="neo_checknon">
+<!-- NEOを使う -->
+<label class="checkbox"><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
+	</span>
 <!--{def anime}--><label class="checkbox"><input type="checkbox" value="true" name="anime"{$animechk}><span class="use_animation">動画記録</span></label><!--{/def}-->
 <!--(
 // anime…動画記録機能を使用するとき true が入る
