@@ -649,14 +649,14 @@ SetTimeCount();
 <param name="speed" value="{$speed}">
 <param name="buffer_progress" value="false">
 <param name="buffer_canvas" value="false">
-<!--
+<!--(
 <param name="color_back" value="#FFFFFF">
 <param name="color_text" value="#333333">
 <param name="color_icon" value="#FFFFFF">
 <param name="color_bar" value="#AAAAAA">
 <param name="color_bar_select" value="#999999">
 <param name="color_frame" value="#666666">
--->
+)-->
 </APPLET>
 </div>
 <div class="pch_download">
@@ -700,8 +700,11 @@ SetTimeCount();
     <!--(========== クッキー読込み用JavaScript(必須) ==========)-->
     <Script language="JavaScript" src="loadcookie.js"></script>
     <!--(========== 画像と描画時間 ==========)-->
-    <div class="continue_img"><img src="{$picfile}" border="0" width="{$picw}" height="{$pich}" alt="{$picw}x{$pich}" title="{$picw}x{$pich}"></div>
-    <div class="continue_painttime"><!--{def painttime}-->描画時間：{$painttime}<!--{/def}--></div>
+	<div class="continue_img"><a href="{$self}?res={$no}">
+<img src="{$picfile}" width="{$picw}" height="{$pich}" alt="{$picw}x{$pich} {$title}" title="{$picw}x{$pich} {$title}">
+</a>
+	</div>
+        <div class="continue_painttime"><!--{def painttime}-->描画時間：{$painttime}<!--{/def}--></div>
     <!--(========== コンティニューフォーム欄 ==========)-->
     <form action="{$self}" method="post">
       <input type="hidden" name="mode" value="contpaint">
@@ -720,23 +723,19 @@ SetTimeCount();
 	<option value="new">新規投稿</option>
        </select>
       <br>
-<!-- <!--{def applet}-->
+<!--(
+{def applet}
 アプレット
 <select name="shi" class="paint_select">
-  <!--{def usepbbs}-->
+  {def usepbbs}
   <option value="0">PaintBBS</option>
-  <!--{/def}-->
+  {/def}
   <option value=1>しぃペインター</option>
   <option value=2>しぃペインターPro</option>
 </select>
-<!--{/def}--> -->
-     <!--(// しぃで反映されない上にお絵かき画面でパレット変更できるのでコメント化
-パレット<select name=palette><option value="" selected> デフォルト</option>
-{$palette}
-</select>
+{/def}
 )-->
-<!--{def passflag}-->削除キー
-<!--{/def}-->
+削除キー
 <input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password">
 <input type="submit" value="続きを描く">
 </form>
