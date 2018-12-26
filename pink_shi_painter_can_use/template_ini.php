@@ -1,11 +1,11 @@
 <?php
 /*
-  * Template - PINK - lot.181031  by さとぴあ  >> http://stp.sblo.jp/
+  * Template - PINK - lot.181228  by さとぴあ  >> http://stp.sblo.jp/
   *
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.181031");
+define('TEMPLATE_VER', "lot.181228");
 
 
 /* ---------- ADD:2004/06/22 ---------- */
@@ -132,10 +132,10 @@ define('UPDATE_MARK', '(編集)');
 //define(DATE_FORMAT, 'Y/m/d(<1>) H:i');
 define('DATE_FORMAT', 'Y/m/d(D) H:i');
 
-//管理画面(削除モード)の奇数行カラー　使わない
+//管理画面(削除モード)の奇数行カラー
 define('ADMIN_DELKISU', 'FFDDF1');
 
-//管理画面(削除モード)の偶数行カラー　使わない
+//管理画面(削除モード)の偶数行カラー
 define('ADMIN_DELGUSU', 'FFD0EE');
 
 ?>

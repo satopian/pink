@@ -75,8 +75,9 @@
 <!--(========== お絵かきアプレット ==========)-->
 <!--({def applet}
 <select name="shi" class="select_applet">
-{def usepbbs}<option value="0">PaintBBS</option>{/def}
-
+{def usepbbs}
+<option value="0">PaintBBS</option>
+{/def}
 <option value="1">しぃペインター</option>
 <option value="2">しぃペインターPro</option>
 </select>
@@ -107,8 +108,8 @@ x
 	<option value="600">600</option>
 </select>&nbsp;
 <!--/CANVAS_SELECT-->
-<!-- 横:<input type="text" name="picw" value="{$pdefw}" size="3">縦:<input type="text" name="pich" value="{$pdefh}" size="3">
- -->
+<!--( 横:<input type="text" name="picw" value="{$pdefw}" size="3">縦:<input type="text" name="pich" value="{$pdefh}" size="3">
+)-->
 <!--(
 // pdefw…お絵かきデフォルトサイズ(横)
 // pdefh…お絵かきデフォルトサイズ(縦)
@@ -221,7 +222,7 @@ x
  <tr>
   <td class="post_table_title">削除キー</td>
   <td><input type="password" name="pwd" value="" class="post_input_pass" autocomplete="current-password">
-    (記事の編集削除用。英数字で)</td>
+    <span class="howtoedit">(記事の編集削除用。英数字で)</span></td>
  </tr>
  <tr><td colspan="2" style="text-align: center;" class="post_table_submit td_noborder"><input type="submit" value="送信する" class="post_submit"></td></tr>
  <tr>

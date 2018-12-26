@@ -71,13 +71,17 @@
 <form action="{$self}" method="post">
 <input name="submit" type="submit" value="PAINT" class="paint_button">
 <!--(========== お絵かきアプレット ==========)-->
-<!-- <!--{def applet}-->
+<!--(
+{def applet}
 <select name="shi" class="select_applet">
-<!--{def usepbbs}--><option value="0">PaintBBS</option><!--{/def}-->
+{def usepbbs}
+<option value="0">PaintBBS</option>
+{/def}
 <option value="1">しぃペインター</option>
 <option value="2">しぃペインターPro</option>
 </select>
-<!--{/def}--> -->
+{/def}
+)-->
 <!--(// しぃで反映されない上にお絵かき画面でパレット変更できるのでコメント化
 パレット<select name=palette><option value="" selected> デフォルト</option>
 {$palette}
@@ -94,11 +98,6 @@
 	<option value="500">500</option>
 	<option value="550">550</option>
 	<option value="600">600</option>
-	<option value="650">650</option>
-	<option value="700">700</option>
-	<option value="750">750</option>
-	<option value="800">800</option>
-
 </select>
 x
 <select name="pich" title="高さ" class="canvas_select">
@@ -110,10 +109,6 @@ x
 	<option value="500">500</option>
 	<option value="550">550</option>
 	<option value="600">600</option>
-	<option value="650">650</option>
-	<option value="700">700</option>
-	<option value="750">750</option>
-	<option value="800">800</option>
 </select>&nbsp;
 <!--/CANVAS_SELECT-->
 <!-- 横:<input type="text" name="picw" value="{$pdefw}" size="3">縦:<input type="text" name="pich" value="{$pdefh}" size="3">
