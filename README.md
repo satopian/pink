@@ -34,7 +34,7 @@ Chromeの拡張機能[CheerpJ](https://chrome.google.com/webstore/detail/cheerpj
 
 Javaで起動したほうが安定していますが、対応ブラウザは2018年現在IE11だけです。
 
-##サーバへの転送
+## サーバへの転送
 
 __pink_neo_only__
 __pink_shi_painter_can_use__
@@ -47,7 +47,7 @@ readme_pink.txtにその他の必要事項を記載しています。
 
 問題なく動作する事を期待して作成していますが、なんらかの不具合があったとしても無保証です。
 
-##IE Edgeでは管理画面からの削除ができません
+## IE Edgeでは管理画面からの削除ができません
 
 管理者パスワードがurlアドレスに入る仕様はセキュリティ上好ましくないため、HTML5のformにidをつける記述を使って書き換えました。
 結果的にIE、Edgeでは管理画面からの記事の削除ができなくなりました。
