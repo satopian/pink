@@ -10,14 +10,14 @@
 
 お絵かき掲示板のスクリプト本体、[POTI-board改](https://sakots.red/poti/)をダウンロードします。
 [PaintBBS NEO](https://github.com/funige/neo)をダウンロードします。
-必要なファイルは、neo/dist/の__neo.css__と、__neo.js__の2つです。
+必要なファイルは、neo/dist/の**neo.css**と、**neo.js**の2つです。
 
 
 ## 緑色の「Clone or download」ボタンを押下してpink-master.zipを入手します。
 
-__pink_neo_only__
+**pink_neo_only**
 と
-__pink_shi_painter_can_use__
+**pink_shi_painter_can_use**
 
 2つのフォルダがあります。
 
@@ -36,11 +36,11 @@ Javaで起動したほうが安定していますが、対応ブラウザは2018
 
 ## サーバへの転送
 
-__pink_neo_only__
-__pink_shi_painter_can_use__
+**pink_neo_only**
+**pink_shi_painter_can_use**
 
-の__フォルダの中身__を、potiboard.phpと同じディレクトリに転送します。
-__フォルダごと転送しても動きません__のでご注意ください。
+の**フォルダの中身**を、potiboard.phpと同じディレクトリに転送します。
+**フォルダごと転送しても動きません**のでご注意ください。
 
 readme_pink.txtにその他の必要事項を記載しています。
 基本的に、これだけの情報で自力で設置、カスタマイズができる方のためのテンプレートです。
