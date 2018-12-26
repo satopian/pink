@@ -37,6 +37,7 @@ Javaで起動したほうが安定していますが、対応ブラウザは2018
 ## サーバへの転送
 
 **pink_neo_only**
+
 **pink_shi_painter_can_use**
 
 の**フォルダの中身**を、potiboard.phpと同じディレクトリに転送します。
