@@ -214,13 +214,17 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 <form action="{$self}" method="post">
 <!--(========== お絵かきアプレット ==========)-->
 <input name="submit" type="submit" value="PAINT" class="paint_button">
-<!-- <!--{def applet}-->
+<!--(
+{def applet}
 <select name="shi" class="select_applet">
-<!--{def usepbbs}--><option value="0">PaintBBS</option><!--{/def}-->
+{def usepbbs}
+<option value="0">PaintBBS</option>
+{/def}
 <option value="1">しぃペインター</option>
 <option value="2">しぃペインターPro</option>
 </select>
-<!--{/def}--> -->
+{/def}
+)-->
 <!--(// しぃで反映されない上にお絵かき画面でパレット変更できるのでコメント化
 パレット<select name=palette><option value="" selected> デフォルト</option>
 {$palette}
