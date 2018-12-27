@@ -2,11 +2,11 @@
 
 [お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
-設置サンプルはこちら。
+### 設置サンプル
 
 [POTI-board用テンプレート PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
 
-特徴をまとめたブログはこちら。
+### 特徴
 
 [POTI-board用テンプレート PINK を配布します。: STP^3](http://stp.sblo.jp/article/182310034.html)
 
@@ -28,8 +28,7 @@ NEO以外使えません。
 しぃペインターも使いたい人のためのテンプレートです。
 
 NEOを使うのチェックを外すと、しぃペインター標準版が起動します。
-Chromeの拡張機能[CheerpJ](https://chrome.google.com/webstore/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein)で起動する事を想定しています。
-しかし、サーバによってはCheerpJがうまく機能しないかもしれません。
+JavaアプレットをChromeの拡張機能[CheerpJ](https://chrome.google.com/webstore/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein)で起動する事を想定していますが、サーバによっては期待通りの動作をしない事があるようです。
 
 Javaで起動したほうが安定していますが、対応ブラウザは2018年現在IE11だけです。
 
@@ -54,3 +53,9 @@ readme_pink.txtにも、その他の必要事項を記載しました。
 結果的に、IEとEdgeでは管理画面からの記事の削除ができなくなりました。
 
 管理者がChrome、Firefoxを使えば解決するため、セキュリティリスクの排除を優先しました。
+
+## 履歴
+#### PINK lot.181228
+
+しぃペインター標準版も使えるテンプレート配布開始。
+管理画面のセキュリティ対策。
