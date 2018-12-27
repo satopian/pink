@@ -2,7 +2,11 @@
 
 [お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
+設置サンプルはこちら。
+
 [POTI-board用テンプレート PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
+
+特徴をまとめたブログはこちら。
 
 [POTI-board用テンプレート PINK を配布します。: STP^3](http://stp.sblo.jp/article/182310034.html)
 
@@ -12,14 +16,7 @@
 [PaintBBS NEO](https://github.com/funige/neo)をダウンロードします。
 必要なファイルは、neo/dist/の**neo.css**と、**neo.js**の2つです。
 
-
 ## 緑色の「Clone or download」ボタンを押下してpink-master.zipを入手します。
-
-**pink_neo_only**
-と
-**pink_shi_painter_can_use**
-
-2つのフォルダがあります。
 
 ### pink_neo_only
 
@@ -27,6 +24,8 @@ HTML5版しぃPaintBBS NEO のためのテンプレートです。
 NEO以外使えません。
 
 ### pink_shi_painter_can_use
+
+しぃペインターも使いたい人のためのテンプレートです。
 
 NEOを使うのチェックを外すと、しぃペインター標準版が起動します。
 Chromeの拡張機能[CheerpJ](https://chrome.google.com/webstore/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein)で起動する事を想定しています。
