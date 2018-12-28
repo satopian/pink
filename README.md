@@ -23,7 +23,11 @@ BBSNoteのようなレイアウト。
 [PaintBBS NEO](https://github.com/funige/neo)をダウンロードします。
 必要なファイルは、neo/dist/の**neo.css**と、**neo.js**の2つです。
 
-## 緑色の「Clone or download」ボタンを押下してpink-master.zipを入手します。
+## このテンプレートのダウンロード 
+
+**緑色の「Clone or download」ボタンを押下してpink-master.zipを入手します。**
+
+zipファイルに2つのフォルダが入っています。
 
 ### pink_neo_only
 
