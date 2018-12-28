@@ -300,7 +300,7 @@ l(); //LoadCookie
   <th class="delcheck"><label class="checkbox_nt"><input form="delete" type="checkbox" name="del[]" value="{$del/no}"></label></th>
 
   <th class="nobreak">
- <form action="{$self}" method="post" name="form{$del/no}">
+ <form action="{$self}" method="post" id="form{$del/no}">
 <input type="hidden" name="del[]" value="{$del/no}"><input type="hidden" name="pwd" value="{$pass}"><input type="hidden" name="mode" value="edit">
 <a href="javascript:form{$del/no}.submit()">{$del/no}</a></form>
   
