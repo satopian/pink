@@ -55,7 +55,7 @@ Javaで起動したほうが安定していますが、Javaに対応している
 色の設定は外部cssで行っています。
 Chromeのデベロッパーツールでpink.cssを編集すれば配色を変更する事ができます。
 
-readme_pink.txtにも、その他の必要事項を記載しました。
+[readme_pink.txt](https://github.com/satopian/pink/blob/master/pink_neo_only/readme_pink.txt)にも、その他の必要事項を記載しました。
 
 基本的に、これだけの情報で自力で設置、カスタマイズができる方のためのテンプレートです。
 問題なく動作する事を期待して作成していますが、なんらかの不具合があっても無保証です。
