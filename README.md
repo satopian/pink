@@ -39,7 +39,7 @@ NEO以外使えません。
 しぃペインターも使いたい人のためのテンプレートです。
 
 NEOを使うのチェックを外すと、しぃペインター標準版が起動します。
-JavaアプレットをChromeの拡張機能[CheerpJ](https://chrome.google.com/webstore/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein)で起動する事を想定していますが、サーバによっては期待通りの動作をしない事があるようです。
+JavaアプレットをChromeの拡張機能[CheerpJ](https://chrome.google.com/webstore/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein)で起動する事を想定していますが、サーバによっては期待している動作にならないかもしれません。
 
 Javaで起動したほうが安定していますが、Javaに対応しているブラウザは2018年現在IE11とWaterfoxだけです。
 
