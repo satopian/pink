@@ -283,6 +283,7 @@ a:hover {
 }
 .article_info_painttime {
 	padding-right: 3px;
+	display: inline-block;
 	}
 .article_info_continue {
 	padding-right:  1px;
