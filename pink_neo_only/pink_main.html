@@ -38,8 +38,6 @@
 <header>
 <h1 id="bbs_title">{$title}</h1>
 <!--(========== resnoがある＝レスモード ==========)-->
-
-<div id="main_head_menu">
 <nav>
 <div class="bbsmenu">
 [<a href="{$home}" target="_top">ホーム</a>]
@@ -60,10 +58,8 @@
 <!-- 1行広告用 -->
 <div class="menu_pr"></div>
 <div class="clear"></div>
-</div>
 <!-- 掲示板の説明 -->
 <div class="howtouse">楽しくお絵描き。</div>
-<div id="paint_form">
 <!--(========== お絵かきフォーム欄 ==========)-->
 <!--{def paintform}-->
 <!--(========== 実際のお絵かきフォーム ==========)-->
@@ -135,7 +131,6 @@ x
 <!--{/def}-->
 <!--(========== お絵かきフォーム欄のみ時に表示 ==========)-->
 <!--{def paint2}-->
-</div>
 <div class="howtopaint">
 <ul id="up_desc">
 <li>お絵かきできる画像のサイズは横 300～{$pmaxw}、縦 300～{$pmaxh}の範囲内です。</li>
@@ -264,7 +259,7 @@ x
 <!--(========== 親記事ヘッダここから ==========)-->
 <h2 class="article_title"><a href="{$self}?res={$oya/no}">[{$oya/no}] {$oya/sub}</a></h2>
 <div class="article_info">
-<span class="article_info_name"><strong><!--{def oya/email}--><a href="mailto:{$oya/email}"><!--{/def}-->{$oya/name}<!--{def oya/email}--></a><!--{/def}--></strong></span><!--{def $oya/trip}--><span class="article_info_desc">{$oya/trip}</span><!--{/def}-->
+<span class="article_info_name"><!--{def oya/email}--><a href="mailto:{$oya/email}"><!--{/def}-->{$oya/name}<!--{def oya/email}--></a><!--{/def}--></span><!--{def $oya/trip}--><span class="article_info_desc">{$oya/trip}</span><!--{/def}-->
 <!--{def oya/url}--><span class="article_info_desc">[<a href="{$oya/url}" target="_blank" rel="nofollow noopener noreferrer">URL</a>]</span> <!--{/def}-->
 <!--{def oya/id}--><span class="article_info_desc">ID:{$oya/id}</span> <!--{/def}-->
 <span class="article_info_desc">{$oya/now}</span>
@@ -330,13 +325,12 @@ x
 <div class="res_article_wrap">
 <!--(レス記事ヘッダここから)-->
 <div class="res_article_title">[{$oya/res/no}] {$oya/res/sub}</div>
-<div class="article_info"><span class="article_info_name"><strong><!--{def oya/res/email}--><a href="mailto:{$oya/res/email}"><!--{/def}-->{$oya/res/name}<!--{def oya/res/email}--></a><!--{/def}--></strong></span><!--{def $oya/res/trip}--><span class="article_info_desc">{$oya/res/trip}</span><!--{/def}-->
+<span class="article_info_name"><!--{def oya/res/email}--><a href="mailto:{$oya/res/email}"><!--{/def}-->{$oya/res/name}<!--{def oya/res/email}--></a><!--{/def}--></span><!--{def $oya/res/trip}--><span class="article_info_desc">{$oya/res/trip}</span><!--{/def}-->
 <!--{def oya/res/url}--><span class="article_info_desc">[<a href="{$oya/res/url}" target="_blank" rel="nofollow noopener noreferrer">URL</a>]</span> <!--{/def}-->
 <!--{def oya/res/id}--><span class="article_info_desc">ID:{$oya/res/id}</span> <!--{/def}-->
 <span class="article_info_desc">{$oya/res/now}</span>
 <!--{def oya/res/src}--><!--{def oya/res/painttime}--><span class="article_info_painttime">描画時間:{$oya/res/painttime}</span><!--{/def}--><!--{/def}-->
 <!--{def oya/res/updatemark}--><span class="article_info_desc">{$oya/res/updatemark}</span> <!--{/def}-->
-</div>
 <div class="article_img_info">
 <!--{def oya/res/src}-->
 <!--{def oya/res/continue}--><span class="article_info_continue">☆<a href="{$self}?mode=continue&no={$oya/res/continue}">続きを描く</a></span><!--{/def}--> <!--{def oya/res/pch}--><!--{def oya/res/continue}-->| <!--{/def}--><span class="article_info_animation">☆<a href="{$self}?mode=openpch&pch={$oya/res/pch}" target="_blank">動画</a></span><!--{/def}-->
@@ -419,7 +413,6 @@ x
 )-->
 <!--{ifne resform:true}--><!--{def notres}-->
 <div class="clear"></div>
-<div class="margin_resbutton">
 <div class="res_button_wrap">
 <!--{def sharebutton}-->
 <span class="share_button">
@@ -431,7 +424,7 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 </script>
 	</span>
 <!--{/def}-->
-	<form action="{$self}?res={$oya/no}" method="post"><input type="submit" value="返信" class="res_button"></form><span class="page_top"><a href="#top">△</a></span></div></div>
+	<form action="{$self}?res={$oya/no}" method="post"><input type="submit" value="返信" class="res_button"></form><span class="page_top"><a href="#top">△</a></span></div>
 <!--{/def}--><!--{/ifne}-->
 <hr>
 <!-- /thread -->
@@ -442,8 +435,9 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 <footer>
 <!--(========== メイン時ページング表示 ==========)-->
 <!--{def notres}-->
-<nav><div class="pagelink">
+<nav>
 <div id="paging_wrap">{$paging}</div>
+<div class="pagelink">
 <div class="pagelink_prev"><!--{def prev}--><a href="{$prev}">≪前へ</a><!--{/def}-->
 </div>
 <div class="pagelink_top"><a href="{$self2}">掲示板トップ</a></div>
