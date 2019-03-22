@@ -26,7 +26,6 @@ document.paintBBSCallback = function (str) {
 	}
 	}
 </script>
-
 <!--{def useneo}-->
 <link rel="stylesheet" href="neo.css" type="text/css" />
 <script src="neo.js" charset="UTF-8"></script>
@@ -37,7 +36,6 @@ document.paintBBSCallback = function (str) {
 <script src="neo.js" charset="UTF-8"></script>
 <!--{/def}-->
 <!--{/def}-->
-
 <!-- Javaが使えるかどうか判定 -->
 <!--{ndef paintbbs}-->
 <!--(
@@ -61,7 +59,6 @@ window.addEventListener("load", function() { cheerpJLoad(); }, false);
 <header>
 <!--{def paint_mode}--><h1 style= "min-width:calc({$w}px + 176px)" id="bbs_title">お絵かきモード</h1><!--{/def}-->
 <!--{ndef paint_mode}--><h1 id="bbs_title"><!--{def continue_mode}-->続きを描く<!--{/def}--><!--{def pch_mode}-->動画表示モード<!--{/def}--></h1><!--{/ndef}-->
-
 <!--(========== お絵かきモード ==========
 // 【お絵かき(通常/続き)】
 //
@@ -135,10 +132,8 @@ uAgent = navigator.userAgent.toUpperCase();
 aName   = navigator.appName.toUpperCase();
 if (uAgent.indexOf("MAC") >= 0)			{ OS="MAC" }
 else if (uAgent.indexOf("WIN") >= 0)		{ OS="WIN" }
-
 if (aName.indexOf("NETSCAPE") >= 0)		{ BROWSER="NN" }
 else if (aName.indexOf("MICROSOFT") >= 0)	{ BROWSER="IE" }
-
 if (aName.indexOf("NETSCAPE") >= 0){
 	appVer  = navigator.appVersion;
 	s = appVer.indexOf(" ",0);
@@ -150,7 +145,6 @@ if (aName.indexOf("NETSCAPE") >= 0){
 	e = appVer.indexOf(";",s);
 	version = eval(parseInt(appVer.substring(s,e)));
 }
-
 function setPalette(){
 	d = document
 	d.paintbbs.setColors(Palettes[d.Palette.select.selectedIndex])
@@ -179,7 +173,6 @@ function PaletteDel(){
 	s = document.Palette.select
 	i = s.selectedIndex
 	if(i == -1)return
-
 	flag = confirm("「"+s.options[i].text + "」を削除してよろしいですか？")
 	if (!flag) return
 	s.options[i] = null
@@ -243,7 +236,6 @@ function PalleteMatrixSet(){
 		flag = confirm(str+"\n現在のパレット情報に追加しますがよろしいですか？");break
 	}
 		if (!flag) return
-
 	PaletteSet()
 	if(s.length < 30){ s.size = s.length}else{s.size=30};
 	if(DynamicColor) PaletteListSetColor()
@@ -275,18 +267,15 @@ function PaletteSet(){
 		while(n<l){
 			e = se.indexOf("\n#",n)
 			if(e == -1)return
-
 			pn = se.substring(n,e-1)
 			o = se.indexOf("!",e)
 			if(o == -1)return
 			pa = se.substring(e+1,o-2)
 			if (pn != "Palette"){
 			if(i >= 0)s.options[i] = new Option(pn)
-
 			Palettes[i] = pa
 			i++
 			}else{document.paintbbs.setColors(pa)}
-
 			n=o+1
 		}
 		break
@@ -319,7 +308,6 @@ function GetBright(c){
 function Chenge_(){
 	var st = document.grad.pst.value
 	var ed = document.grad.ped.value
-
 	if(isNaN(parseInt("0x" + st)))return
 	if(isNaN(parseInt("0x" + ed)))return
 	GradView("#"+st,"#"+ed);
@@ -329,7 +317,6 @@ function ChengeGrad(){
 	st = d.grad.pst.value
 	ed = d.grad.ped.value
 	Chenge_()
-
 	degi_R = parseInt("0x" + st.substr(0,2))
 	degi_G = parseInt("0x" + st.substr(2,2))
 	degi_B = parseInt("0x" + st.substr(4,2))
@@ -628,7 +615,6 @@ SetTimeCount();
 </div>
 <!--(========== 描画時間動的表示 ここまで ==========)-->
 <p><!--{def anime}-->★描画アニメ記録中★<!--{/def}--></p>
-
 <!--(========== お絵かき設定値の再設定関連 ==========)-->
 <!--(========== お絵かき設定値の再設定関連 ここまで ==========)-->
 <a href="{$self}?mode=piccom<!--{def resno}-->&resto={$resno}<!--{/def}-->">アップロード途中の画像</a>
@@ -683,11 +669,8 @@ SetTimeCount();
 <div class="pch_download">
 <A href="{$pchfile}" target="_blank" rel="noopener noreferrer">Download</A><br>
 <small>Datasize : {$datasize} byte</small><br>
-	
 	<a href="{$self2}">{$title}</a> / <a href="javascript:close()">閉じる</a>
 </div>
-
-
 <!--{/def}-->
 <!--(========== 動画表示モード ここまで ==========)-->
 <!--(========== コンティニューモード ==========
@@ -717,8 +700,6 @@ SetTimeCount();
 </div>
 </nav>
 </header>
-
-
  	<div class="centering">
     <!--(========== クッキー読込み用JavaScript(必須) ==========)-->
     <Script language="JavaScript" src="loadcookie.js"></script>
@@ -737,6 +718,7 @@ SetTimeCount();
       <input type="hidden" name="no" value="{$no}">
       <input type="hidden" name="pch" value="{$pch}">
       <input type="hidden" name="ext" value="{$ext}">
+      <span class="nk">
       <select name="ctype" class="paint_select">
         <!--{def ctype_pch}--><option value="pch">動画より続きを描く</option><!--{/def}-->
         <!--{def ctype_img}--><option value="img">画像より続きを描く</option><!--{/def}-->
@@ -745,8 +727,8 @@ SetTimeCount();
 	<option value="rep">差し換え</option>
 	<option value="new">新規投稿</option>
        </select>
+       </span>
       <br>
-
 <!--(//コメントアウト
 {def applet}
 アプレット<select name="shi" class="paint_select">
@@ -763,8 +745,7 @@ SetTimeCount();
 {$palette}
 </select>
 )-->
-削除キー<input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password">
-
+<span class="nk">削除キー<input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password"></span>
 <!-- NEOを使う -->
 <!--{ndef ctype_pch}-->
 <label><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
@@ -777,7 +758,6 @@ SetTimeCount();
 <input type="hidden" name="useneo" value="1">
 <!--{/def}-->
 </form>
-
     <!--(========== コンティニュー説明 ==========)-->
     <div class="howtocontinue">
            <ul id="up_desc">

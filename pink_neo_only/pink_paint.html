@@ -714,6 +714,7 @@ SetTimeCount();
       <input type="hidden" name="no" value="{$no}">
       <input type="hidden" name="pch" value="{$pch}">
       <input type="hidden" name="ext" value="{$ext}">
+      <span class="nk">
       <select name="ctype" class="paint_select">
         <!--{def ctype_pch}--><option value="pch">動画より続きを描く</option><!--{/def}-->
         <!--{def ctype_img}--><option value="img">画像より続きを描く</option><!--{/def}-->
@@ -722,6 +723,7 @@ SetTimeCount();
 	<option value="rep">差し換え</option>
 	<option value="new">新規投稿</option>
        </select>
+       </span>
       <br>
 <!--(
 {def applet}
@@ -735,14 +737,15 @@ SetTimeCount();
 </select>
 {/def}
 )-->
-削除キー
+<span class="nk">削除キー
 <input type="password" name="pwd" size="8" value="" class="paint_password" autocomplete="current-password">
+</span>
 <input type="submit" value="続きを描く">
 </form>
 
     <!--(========== コンティニュー説明 ==========)-->
       <div class="howtocontinue">
-      <ul id="up_desc">
+      <ul>
 
     <!--{def passflag}-->
     <!--{def newpost_nopassword}-->
