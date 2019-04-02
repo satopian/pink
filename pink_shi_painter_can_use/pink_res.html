@@ -341,10 +341,10 @@ x
 <!--{/def}-->
 <!--(========== ファイルアップロード欄 ==========)-->
 <!--{def upfile}-->
- <!--{def admin}--><tr>
+ <!--(<tr>
   <td class="post_table_title">添付画像</td>
   <td><input type="file" name="upfile"></td>
- </tr><!--{/def}-->
+ </tr>)-->
 <!--{/def}-->
  <tr>
   <td class="post_table_title">削除キー</td>
@@ -353,7 +353,6 @@ x
 <!--{def upfile}-->
 <!--(
 // 画像なしにデフォでチェックする(アップロード使用不可)
-<span class="res_textonly_display_non"><label class="checkbox"><input type="checkbox" name="textonly" value="on" checked="checked">画像なし</label></span>
 )-->
 <input type="hidden" name="textonly" value="1">
  <!--{/def}--></td>
