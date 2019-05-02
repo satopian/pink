@@ -39,7 +39,7 @@ NEO以外使えません。
 しぃペインターも使いたい人のためのテンプレートです。
 
 NEOを使うのチェックを外すと、しぃペインター標準版が起動します。
-JavaアプレットをChromeの拡張機能[CheerpJ](https://chrome.google.com/webstore/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein)で起動する事を想定していますが、サーバによっては期待している動作にならないかもしれません。
+JavaアプレットをChromeの拡張機能[CheerpJ](https://chrome.google.com/webstore/detail/cheerpj-applet-runner/bbmolahhldcbngedljfadjlognfaaein)で起動する事を想定していますが、サーバによっては期待した動作にならないかもしれません。
 
 Javaで起動したほうが安定していますが、Javaに対応しているブラウザは2018年現在IE11とWaterfoxだけです。
 
@@ -65,7 +65,7 @@ Chromeのデベロッパーツールでpink.cssを編集すれば配色を変更
 管理者パスワードがurlアドレスに入る仕様はセキュリティ上好ましくないため書き換えました。
 
 結果的に、IEでは管理画面で記事を削除する事ができなくなりました。
-Edgeも非対応と思っていましたがWindows10のEdge42.17134.1.0で試してみたところ問題なく動作しました。
+Edgeも非対応だと思っていましたがWindows10のEdge42.17134.1.0で試してみたところ問題なく動作しました。
 
 管理者が管理画面で記事を削除する時にIE以外のブラウザを使えばすむことなのでセキュリティリスクの排除を優先しました。
 
