@@ -224,38 +224,53 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 </select>
 {/def}
 )-->
-<!--(// しぃで反映されない上にお絵かき画面でパレット変更できるのでコメント化
-パレット<select name=palette><option value="" selected> デフォルト</option>
-{$palette}
-</select>
+<!--(===キャンバスサイズ 設定はconfig.phpで ===)-->
+<!--(
+config.phpで設定した
+//お絵描きデフォルトサイズ(最初に選択される数値)
+PDEF_W //幅
+PDEF_H// 高さ
+//お絵描き最大サイズ
+PMAX_W //幅
+PMAX_H //高さ
+が入ります。
 )-->
-<!-- CANVAS_SELECT -->
 <span class="canvas_size">Size</span>：
-<select name="picw" class="canvas_select" title="幅">
-	<option value="200" selected>200</option>
-	<option value="250">250</option>
-	<option value="300">350</option>
-	<option value="350">350</option>
-	<option value="400">400</option>
-	<option value="450">450</option>
-	<option value="500">500</option>
+<select name="picw" title="幅" class="canvas_select">
+<?php
+$c_w=array();//横幅 300から、PMAX_W で設定された最大値まで。
+	for($i = 300; $i <=PMAX_W ; $i+=50){//50ずつ増える
+	$c_w[]=$i;
+		}
+	foreach($c_w as $vc_w){
+	if(PDEF_W==$vc_w){
+	echo'<option value="'.$vc_w.'" selected>'.$vc_w.'</option>';
+	}
+	else{
+	echo'<option value="'.$vc_w.'">'.$vc_w.'</option>';
+	}
+	}
+?>
 </select>
 x
-<select name="pich" class="canvas_select" title="高さ">
-	<option value="200" selected>200</option>
-	<option value="250">250</option>
-	<option value="300">350</option>
-	<option value="350">350</option>
-	<option value="400">400</option>
-	<option value="450">450</option>
-	<option value="500">500</option>
+<select name="pich" title="高さ" class="canvas_select">
+<?php
+$c_h=array();//縦幅 300から、PMAX_H で設定された最大値まで。
+	for($i = 300; $i <=PMAX_H ; $i+=50){//50ずつ増える
+	$c_h[]=$i;
+		}
+	foreach($c_h as $vc_h){
+	if(PDEF_H==$vc_h){
+	echo'<option value="'.$vc_h.'" selected>'.$vc_h.'</option>';
+	}
+	else{
+	echo'<option value="'.$vc_h.'">'.$vc_h.'</option>';
+	}
+	}
+?>
 </select>&nbsp;
-<!--/CANVAS_SELECT-->
-<!--( <span class="nk">横:<input type="text" name="picw" value="{$pdefw}" size="3">縦:<input type="text" name="pich" value="{$pdefh}" size="3"></span> )-->
-<!--(
-// pdefw…お絵かきデフォルトサイズ(横)
-// pdefh…お絵かきデフォルトサイズ(縦)
-)-->
+<!--(===キャンバスサイズ ここまで ===)-->
+
 <span class="neo_checknon">
 <!-- NEOを使う -->
 <label class="checkbox"><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
