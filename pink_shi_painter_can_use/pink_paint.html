@@ -115,7 +115,6 @@ window.addEventListener("load", function() { cheerpJLoad(); }, false);
 <div style= "min-width:calc({$w}px + 176px)" id="self2"> [<a href="{$self2}">{$title}</a>] </div>
 </nav>
 </header>
-<div id="paint_main">
 <!--(========== 動的パレットスクリプト ここから ==========)-->
 <script>
 <!--
@@ -464,7 +463,7 @@ function showHideLayer() { //v3.0
 </SCRIPT>
 <!--(========== 動的パレットスクリプト ここまで ==========)-->
 <NOSCRIPT><H3>JavaScriptが有効でないため正常に動作致しません</H3></NOSCRIPT>
-<TABLE class="paint_table"><TR><TD class="paint_td">
+<div class="appstage"><div class="app">
 <!--( <APPLET～</APPLET>の～部分の詳しい事は、PaintBBS及びしぃペインターのReadmeを参照 )-->
 <!--(========== PaintBBS個別設定 ==========)-->
 <!--{def paintbbs}-->
@@ -541,10 +540,12 @@ function showHideLayer() { //v3.0
 <!--{def cpal}--><!--{each cpal}-->
 <param name="color_{$cpal/no}" value="#{$cpal/pal}">
 <!--{/each}--><!--{/def}-->
-</APPLET>
-</TD><TD class="palette_td">
+	<!--{def useneo}--></APPLET-DUMMY><!--{/def}-->
+<!--{ndef useneo}--></APPLET><!--{/ndef}-->
+</div>
 <!--(========== 動的パレット制御関連 ==========)-->
-	<div class="palette"><FORM name="Palette">
+<div class="palette_wrap">
+<div class="palette"><FORM name="Palette">
 <span class="palette_desc">PALETTE</span> <INPUT type="button" VALUE="一時保存" OnClick="PaletteSave()"><br>
 <select name="select" size="{$palsize}" onChange="setPalette()" class="palette_select">
 <option>一時保存パレット</option>
@@ -604,13 +605,15 @@ function showHideLayer() { //v3.0
 <option>14</option>
 </SELECT><input type="text" name="ped" size="8" onKeyPress="Chenge_()" onChange="Chenge_()"><div id=psft style="position:absolute;width:100px;height:30px;z-index:1;left:5px;top:10px;"></div>
 </FORM></div>
-</TD></TR></TABLE>
-<Script Language="JavaScript">
+<Script>
 <!--
 if(DynamicColor) PaletteListSetColor();
 //-->
 </Script>
+</div>
+</div>
 <!--(========== 動的パレット制御関連 ここまで ==========)-->
+<div class="centering">
 <!--(========== 描画時間動的表示 ==========)-->
 <div class="applet_painttime">
 <FORM NAME="watch">描画時間

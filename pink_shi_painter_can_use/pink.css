@@ -1,13 +1,16 @@
 @charset "utf-8";
+
 /* 全体設定 */
 body {
-	background-color: #FFD7F0;
+	background-color: #ffd7f0;
 	margin: 1px 10.5px 1em;
 	padding: 2px 0;
-	}
-body,td {
+}
+
+body,
+td {
 	color: #666666;
-	font-family: "Hiragino Sans",meiryo,ヒラギノ角ゴシック,メイリオ,sans-serif;
+	font-family: "Hiragino Sans", meiryo, ヒラギノ角ゴシック, メイリオ, sans-serif;
 	font-size: 15px;
 	letter-spacing: 0.08em;
 	word-break: break-all;
@@ -16,64 +19,77 @@ body,td {
 #body {
 	max-width: 928px;
 	margin: 0 auto;
-	}
+}
+
 ul {
 	padding: 0;
-	margin:  0;
+	margin: 0;
 }
+
 li {
 	padding: 0;
 	margin: 0 0 0 1.5em;
-	}
+}
+
 hr {
-	display: block;
 	height: 1px;
 	border: 0;
-	border-top:1px dashed #888888;
+	border-top: 1px dashed #888888;
 	margin: 2px 0;
-	padding: 0;
-	}
+}
 
-img{border-style:none;}
-input[type="text"], input[type="submit"], input[type="password"], input[type="reset"],input[type="url"],input[type="number"],textarea {
+img {
+	border-style: none;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="password"],
+input[type="reset"],
+input[type="url"],
+input[type="number"],
+textarea,
+select {
 	border: 1px #686868 solid;
-	background-color: #FFFEFF;
-	-webkit-appearance: none;
+	background-color: #FFFFFE;
 	border-radius: 0;
 	margin: 1px;
 	color: #555555;
-	}
+}
+
+select {
+	font-size: 13px;
+	margin: 0;
+}
 
 input[type="file"] {
 	border: none;
 	background-color: transparent;
-	}
+}
+
 input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0 1000px white inset;
-	}
-select{
-	border-radius: 0;
-	background-color: #FFFEFF;
-	border: 1px #686868 solid;
-	color: #666666;
-	font-size:  13px;
-	}
+}
+
 .nk {
 	display: inline-block;
 	margin: 0 0 0.2em;
-	}
-.centering{
+}
+
+.centering {
 	margin: 0 auto;
 	text-align: center;
-	}
+}
 
 /* リンクの色 */
-a{
+a {
 	color: #6f6f6f;
 	text-decoration: underline;
 	text-decoration-skip-ink: none;
 }
+
 a:hover {
+	color: #6f6f6f;
 	text-decoration: none;
 }
 
@@ -92,48 +108,60 @@ a:hover {
 	border-bottom: 1px dashed #888888;
 	color: #8a8a8a;
 	margin: 10px auto 15px auto;
-	}
-.title_name_wrap,.menu_home_wrap {
+}
+
+.title_name_wrap,
+.menu_home_wrap {
 	display: inline-block;
 }
 
 /* メニュー */
-.bbsmenu,.menu_pr {
+.bbsmenu,
+.menu_pr {
 	margin-bottom: 12px;
 }
-.bbsmenu,.res_bbsmenu{
+
+.bbsmenu,
+.res_bbsmenu {
 	float: left;
 	width: auto;
 }
-.menu_pr,.res_menu_pr {
+
+.menu_pr,
+.res_menu_pr {
 	float: right;
 	width: auto;
 }
+
 .clear {
 	clear: both;
 }
+
 /* フォーム */
 @media screen and (max-width: 420px) {
-/* 420px以下の幅の場合に適用される */
-.use_animation {
-	display: none;
-}
+
+	/* 420px以下の幅の場合に適用される */
+	.use_animation {
+		display: none;
+	}
 }
 
 #post_form {
 	margin: 3px auto;
-	}
+}
+
 #self2 {
 	margin: 10px auto 15px;
 	max-width: 928px;
 }
+
 #post_table input {
 	font-size: inherit;
 }
+
 #post_table input[type="submit"] {
-	color: #666666;
-	font-size:  14px;
-	}
+	font-size: 14px;
+}
 
 .margin_radio {
 	margin-bottom: 15px;
@@ -141,32 +169,39 @@ a:hover {
 
 #post_table td {
 	padding: 2px;
-	}
+}
+
 .post_table_title {
 	width: 5.5em;
-	}
+}
+
 .td_noborder {
 	border: none;
-	}
+}
+
 .post_input_text {
 	width: 210px;
 	height: 16px;
 	padding: 1px;
-	}
+}
+
 .post_input_pass {
 	width: 10em;
 	height: 16px;
 	padding: 1px;
 	color: #666666;
-	}
+}
+
 .post_table_submit {
 	height: 2em;
-	}
+}
+
 .post_submit {
 	height: 2em;
 	width: 8em;
-	font-size:  13px;
-	}
+	font-size: 13px;
+}
+
 #post_table select {
 	color: #666666;
 	height: 20px;
@@ -175,13 +210,15 @@ a:hover {
 
 #up_desc li {
 	list-style-type: square;
-	}
+}
+
 /* コメント欄の幅 */
 
 #post_table {
 	border-collapse: collapse;
 	margin: 0 auto;
-	}
+}
+
 .post_input_com {
 	height: 6.2em;
 	width: 338px;
@@ -189,210 +226,249 @@ a:hover {
 	font-size: inherit;
 	font-family: inherit;
 	line-height: 1.3em;
+}
+
+@media screen and (max-width: 499px) {
+	#post_table {
+		margin: 12px 0 0;
+		width: 100%;
+		line-height: 1em;
 	}
 
-@media screen and (max-width: 499px){
-#post_table {
-	margin: 12px 0 0;
-	width: 100%;
-	line-height:  1em;
-	}
-#post_table td {
+	#post_table td {
 		display: block;
 		width: 100%;
 	}
-.post_input_com {
-	width: 98%;
+
+	.post_input_com {
+		width: 98%;
 	}
-	}
+}
 
 /* 親記事 */
 .article_title {
 	font-size: 18px;
 	line-height: 115%;
-	background-color: #FFB5E6;
+	background-color: #ffb5e6;
 	font-weight: bold;
-	border-style: none none dashed solid;
-	border-color: #8a8a8a;
+	border-left: 8px solid;
+	border-bottom: 1px dashed;
 	color: #888888;
-	border-width: 0 0 1px 8px;
-	padding:  6px 0 2px 5px;
+	padding: 6px 0 2px 5px;
 	margin: 0 0 8px;
-	}
+}
+
 .article_title a {
 	display: block;
 	color: #888888;
 	text-decoration: none;
-	}
+}
+
 .article_info {
 	padding: 0;
 	margin: 5px 0 5px;
-	}
+}
+
 .article_info_desc {
 	padding-right: 4px;
 	display: inline-block;
-	}
+}
+
 .article_info_wrap {
 	display: inline-block;
 }
+
 .article_info_painttime {
 	padding-right: 3px;
-	}
+}
+
 .article_info_continue {
-	padding-right:  1px;
+	padding-right: 1px;
 }
+
 .article_info_animation {
-	padding-left:  0; 
+	padding-left: 0;
 }
-.article_img_info{
+
+.article_img_info {
 	margin: 2px 0 12px;
-	}
-.res_article_img_info{
+}
+
+.res_article_img_info {
 	margin: 2px 0 8px;
-	}
+}
 
 /* comment */
 
 .comment {
 	margin: 0 0 12px;
 	display: table;
-	min-width:200px;
+	min-width: 200px;
 	line-height: 175%;
+	/*	letter-spacing: 0.08em;*/
 }
 
 /* img max-width */
 @media screen and (max-width: 899px) {
-/* 899px以下の幅の場合に適用される */
+
+	/* 899px以下の幅の場合に適用される */
 	.posted_image img,
 	.posted_img_form img,
 	.continue_img img {
 		max-width: 100%;
 		height: auto;
-		}
-		}
+	}
+}
 
 .article_limit {
 	font-weight: bold;
 	text-align: right;
 	color: #ff88cc;
-	}
+}
+
 .article_skipres {
 	text-align: right;
-	}
+}
 
 /* レス */
 .res_article_wrap {
 	display: table;
-	}
+}
+
 .res_article_title {
 	margin: 6px 0 5px;
-	}
+}
+
 .res_button_wrap {
 	clear: both;
 	text-align: right;
 	margin: 0 0 8px;
-	}
-.res_button{
-	width:6em;
+}
+
+.res_button {
+	width: 6em;
 	height: 2em;
 	font-size: 13.8px;
-	}
+}
+
 .res_button_wrap form {
 	display: inline-block;
 	margin: 0;
 }
+
 .share_button {
 	display: inline-block;
 	margin: 0 3px -1px;
 	font-size: 15.5px;
 	vertical-align: bottom;
 }
-.icon-twitter,.icon-facebook2 {
+
+.icon-twitter,
+.icon-facebook2 {
 	display: inline-block;
 	padding: 0 2px;
 }
+
 .page_top {
 	display: inline-block;
 	margin: 0 3px 0;
 	vertical-align: bottom;
 }
+
 /* ミニレスフォーム */
-.minires_wrap{
+.minires_wrap {
 	max-width: 500px;
 	text-align: right;
 	margin-left: auto;
-	}
+}
+
 .minres_form_table {
 	width: 100%;
 	max-width: 500px;
 	text-align: right;
-	}
+}
+
 .minres_title {
 	width: 6em;
-	}
+}
+
 .minres_input_text {
 	width: 100%;
 	color: #555555;
 	height: 16px;
 	padding: 1px;
-	}
+}
+
 .minres_input_com {
 	width: 100%;
 	height: 3em;
 	color: #555555;
 	padding: 1px;
-	}
+}
+
 .minres_input_other {
 	width: 10em;
 	height: 16px;
 	padding: 1px;
-	}
+}
+
 .color_select {
 	background-color: #FFFEFF;
 	color: #666666;
-	}
-@media screen and (max-width: 600px){
+}
+
+@media screen and (max-width: 600px) {
 	.minres_form_table td {
 		display: block;
 		width: 100%;
 	}
-	}
+}
 
 /* ページリンク */
 .pagelink {
 	text-align: center;
 	margin: 1em auto;
-	}
+}
+
 #paging_wrap {
 	margin: 1em 0 -0.5em;
 	line-height: 2em;
 	text-align: center;
-	}
+}
+
 .page_number {
 	padding: 0 2px;
-	}
+}
+
 .parentheses {
 	padding: 0 2px;
 	display: inline-block;
-	}
+}
 
-.pagelink_prev , .pagelink_top , .pagelink_next {
+.pagelink_prev,
+.pagelink_top,
+.pagelink_next {
 	display: inline-block;
 	position: relative;
 	padding: 0;
-	}
-.pagelink_prev a , .pagelink_top a , .pagelink_next a {
+}
+
+.pagelink_prev a,
+.pagelink_top a,
+.pagelink_next a {
 	display: inline-block;
 	padding: 2px 3px;
-	}
+}
+
 .pagelink_prev {
 	text-align: right;
 	width: 72px;
 	margin: 1px 0;
-	}
+}
+
 .pagelink_prev a {
 	padding-left: 14px;
-	}
+}
 
 .pagelink_top {
 	text-align: center;
@@ -401,36 +477,37 @@ a:hover {
 	padding: 0 5px;
 	margin: 1px 0;
 }
+
 .pagelink_next {
 	text-align: left;
 	width: 72px;
 	margin: 1px 0;
 }
+
 .pagelink_next a {
 	padding-right: 14px;
-	}
+}
 
 /* 記事メンテナンス */
 .mente_wrap {
 	text-align: center;
 	margin: 1em 1em 0.8em;
-	}
+}
+
 .edit_number {
-	/* color: #666666; */
 	height: 16px;
 	vertical-align: middle;
-	/* margin: 0 2px; */
 	width: 60px;
-	/* border:  1px #686868 solid; */
 }
+
 .edit_password {
-/*	color: #666666;*/
 	width: 80px;
 	height: 16px;
 	vertical-align: middle;
 	margin: 0 2px;
 	padding: 1px;
 }
+
 .mente_wrap select {
 	font-size: 13px;
 	color: #666666;
@@ -438,6 +515,7 @@ a:hover {
 	padding: 0 0 0 2px;
 	vertical-align: middle;
 }
+
 .mente_wrap input[type="submit"] {
 	font-size: 13px;
 	height: 21px;
@@ -448,13 +526,17 @@ a:hover {
 .copyright {
 	text-align: center;
 	margin: 14px 10px 14px;
-	}
+}
 
 /* カタログ表示 */
+.catalog_title {
+	background-color: #ffb5e6;
+}
+
 .catalog_desc_wrap {
 	max-width: 100%;
 	margin: 16px auto 0;
-	}
+}
 
 .catalog_wrap {
 	display: -moz-inline-box;
@@ -464,14 +546,15 @@ a:hover {
 	padding: 0 0 15px 0;
 	margin: 1px 14px 10px 0;
 	line-height: 138%;
-	}
+}
+
 .catalog_desc_wrap div:nth-of-type(3n) {
 	margin-right: 0;
-	}
+}
 
 .catalog_title {
 	line-height: 125%;
-	background-color: #FFB5E6;
+	background-color: #ffb5e6;
 	font-weight: bold;
 	margin: 0 0 1px 0;
 	padding: 4px 5px;
@@ -481,37 +564,43 @@ a:hover {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
-	}
+}
 
 @media screen and (max-width: 965px) {
-.catalog_wrap {
+	.catalog_wrap {
 		width: 32.32%;
 		margin: 1px 1.52% 11px 0;
-}
+	}
 }
 
 @media screen and (max-width: 767px) {
-/* 767px以下の幅の場合に適用される */
-.catalog_desc_wrap {
-	max-width: 560px;
+
+	/* 767px以下の幅の場合に適用される */
+	.catalog_desc_wrap {
+		max-width: 560px;
 	}
-.catalog_wrap {
-	margin: 1px 2% 12px 0;
-	width: 49%;
+
+	.catalog_wrap {
+		margin: 1px 2% 12px 0;
+		width: 49%;
 	}
-.catalog_desc_wrap div:nth-of-type(3n) {
-	margin-right: 2%;
+
+	.catalog_desc_wrap div:nth-of-type(3n) {
+		margin-right: 2%;
 	}
-.catalog_desc_wrap div:nth-of-type(2n) {
-	margin-right: 0;
+
+	.catalog_desc_wrap div:nth-of-type(2n) {
+		margin-right: 0;
 	}
 }
 
 @media screen and (max-width: 965px) {
-/* 960px以下の幅の場合に適用される */
-.catalog_title {
-	font-size: 15px;
-}
+
+	/* 960px以下の幅の場合に適用される */
+
+	.catalog_title {
+		font-size: 15px;
+	}
 }
 
 .catalog_title a {
@@ -566,23 +655,29 @@ a:hover {
 	display: block;
 	padding: 8px 4px;
 }
+
+
 .paint_password {
 	color: #666666;
 	width: 80px;
 	height: 16px;
 	padding: 1px;
 }
+
 .paint_select {
 	color: #666666;
 	height: 21px;
 }
+
 .pch_animation {
-	text-align:  center;
+	text-align: center;
 }
+
 /* 管理モード */
 .admindel_table {
-text-align:center;
+	text-align: center;
 }
+
 .admindel_table {
 	border-collapse: collapse;
 	width: 100%;
@@ -591,48 +686,57 @@ text-align:center;
 }
 
 @media screen and (min-width: 560px) {
-/* 560px以上の幅の場合に適用される */
-.nobreak{
-	white-space: nowrap;
+
+	/* 560px以上の幅の場合に適用される */
+	.nobreak {
+		white-space: nowrap;
 	}
-	}
+}
 
 @media screen and (max-width: 767px) {
-/* 767px以下の幅の場合に適用される */
-.column_non{
-	display:none;
+
+	/* 767px以下の幅の場合に適用される */
+	.column_non {
+		display: none;
 	}
-	}
+}
 
 .hensyu {
 	font-weight: bold;
 	color: #ff88cc;
-	}
+}
+
 .admindel_table tr {
 	height: 2.5em;
-	}
-.admindel_table td , .admindel_table th{
+}
+
+.admindel_table td,
+.admindel_table th {
 	border: 1px solid #8a8a8a;
 	padding: 2px;
-	}
+}
+
 .delcheck label {
 	vertical-align: middle;
-	}
+}
+
 .error_mesage {
 	line-height: 200%;
 	text-align: center;
 	font-size: 30px;
 	color: #f8c;
+	;
 	margin: 1em 0;
 	border-top: 1px dashed #666666;
 	border-bottom: 1px dashed #666666;
-	}
+}
 
 .adminpass {
 	width: 80px;
 	height: 18px;
 	padding: 1px;
 }
+
 .admin_submit {
 	height: 23px;
 }
@@ -641,10 +745,12 @@ text-align:center;
 .howtopaint {
 	margin: 15px auto 15px;
 }
+
 .applet {
 	width: auto;
 	margin: 0 auto;
 }
+
 .continue_img {
 	max-width: 928px;
 	margin-right: auto;
@@ -654,17 +760,36 @@ text-align:center;
 
 /* 動的パレットの位置と装飾 */
 .palette {
-	background-color: #FFB5E6;
-	margin-left: 10px;
+	background-color: #ffb5e6;
+}
+
+/* お絵かきモード */
+
+.appstage {
+	margin: 0 auto;
+	display: table;
+}
+
+.app {
+	display: table-cell;
+	vertical-align: top
+}
+
+.palette_wrap {
+	display: table-cell;
+	vertical-align: middle
+}
+
+.palette {
+	margin-left: 12px;
 	width: 148px;
-	padding: 3px;
 	border: 1px solid #666;
-	padding: 6px;
+	padding: 6px
 }
 
 .palette_gradation {
-	margin: 10px 0 0 10px;
-	padding: 6px;
+	margin: 10px 0 0 12px;
+	padding: 6px
 }
 
 .palette input,
@@ -672,11 +797,6 @@ text-align:center;
 	color: #555;
 	background-color: #fffeff;
 	border: 1px solid #686868
-}
-
-td.palette_td {
-	text-align: left;
-	vertical-align: middle
 }
 
 .palette_hr {
@@ -691,48 +811,38 @@ td.palette_td {
 .palette_select {
 	margin: 2px 0
 }
-/* お絵かきモード */
 
-
-#paint_main {
-	text-align: center;
-	}
-.paint_table{ 
-	margin: 0 auto;
-	}
-.paint_td {
-	vertical-align: top;
-}
-
-/* ペイント画面の説明文 */
 .paintbbs_memo {
 	margin: 18px auto 18px;
 	line-height: 146%;
-	color: #666666;
-	min-width:180px;
-	max-width:768px;
+	color: #666;
+	min-width: 180px;
+	max-width: 768px
 }
 
 .paintbbs_memo li {
-	list-style-type: circle;
+	list-style-type: circle
 }
+
 .paintbbs_memo div {
-	margin-bottom: 15px;
+	margin-bottom: 15px
 }
-/* ペイント画面ペイントタイム */
+
 .applet_painttime {
-	margin-top: 15px;
+	margin-top: 15px
 }
+
 .continue_painttime {
-	margin: 0 0 8px;
+	margin: 0 0 8px
 }
 
 /* 掲示板の説明文 */
 .howtouse {
-margin-top: 0;
-margin-bottom: 12px;
+	margin-top: 0;
+	margin-bottom: 12px;
 }
-/* 続きから描く説明文 */
+
+/*  続から描く説明文 */
 .howtocontinue {
 	margin: 15px auto 8px;
 	display: table;
@@ -744,17 +854,22 @@ margin-bottom: 12px;
 	margin-top: 6px;
 }
 
+
+
 .margin_resbutton_res {
 	margin: 5px 0;
 }
+
 .continue_img img {
 	margin: 3px 0 6px;
 }
+
 .posted_img_form img {
 
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
 .posted_img_form {
 
 	max-width: 928px;
@@ -767,44 +882,52 @@ margin-bottom: 12px;
 	float: left;
 	margin: 0 0 12px;
 }
+
 .posted_image img {
 	margin-right: 15px;
 }
 
 @media screen and (max-width: 767px) {
-/* 767px以下の幅の場合に適用される */
+	/* 767px以下の幅の場合に適用される */
 
-.posted_image {
-	float: none;
+	.posted_image {
+		float: none;
+	}
+
+	.posted_image img {
+		margin-right: 0;
+	}
 }
-.posted_image img {
-	margin-right: 0;
-}
-}
+
 /* スマートフォンには表示しない */
 @media screen and (max-width: 555px) {
-/* 555px以下の幅の場合に適用される */
-.menu_pr,
-.res_menu_pr,
-#res_paint_form,
-.howtopaint,
-.txtnon,
-.article_info_painttime {
-	display: none;
+
+	/* 555px以下の幅の場合に適用される */
+	.menu_pr,
+	.res_menu_pr,
+	#res_paint_form,
+	.howtopaint,
+	.txtnon,
+	.article_info_painttime {
+		display: none;
+	}
 }
-}
+
 @media screen and (max-width: 510px) {
-/* 510px以下の幅の場合に適用される */
-.neo_checknon {
-	display: none;
+
+	/* 510px以下の幅の場合に適用される */
+	.neo_checknon {
+		display: none;
+	}
 }
-}
+
 .article_info_name {
 	padding-right: 6px;
 	font-size: 15.5px;
 	color: #808080;
 	font-weight: 600;
 }
+
 /* メールのリンク下線の色と不透明度 */
 .article_info_name a {
 	text-decoration-color: #6666668a;
@@ -815,41 +938,49 @@ margin-bottom: 12px;
 	font-weight: bold;
 	color: #808080;
 }
+
 .use_animation {
 	font-weight: bold;
 	color: #808080;
 }
+
 .potitag_mode {
 	width: 96%;
 	margin-right: auto;
 	margin-left: auto;
 }
+
 /* ペイントボタン */
 .paint_button {
 	width: 78px;
 	height: 25px;
 }
+
 .select_applet {
 	height: 25px;
 }
+
 .canvas_size {
 	font-weight: bold;
 	color: #808080;
 }
+
 .canvas_select {
 	width: 48px;
 	height: 25px;
 	letter-spacing: 0;
 }
+
 #res_paint_form {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
 }
+
 .post_select_image {
 	height: 20px;
-	padding:1px 3px 1px 1px;
+	padding: 1px 3px 1px 1px;
 }
 
 .pch_download {
@@ -857,21 +988,27 @@ margin-bottom: 12px;
 	margin: 10px 0 0 0;
 	line-height: 1.8em;
 }
+
 .howtoedit {
 	display: inline-block;
 }
+
 @media screen and (max-width: 413px) {
-/* 413px以下の幅の場合に適用される */
-.howtoedit {
-	margin: 8px 0 3px;
+
+	/* 413px以下の幅の場合に適用される */
+	.howtoedit {
+		margin: 8px 0 3px;
+	}
 }
-}
-.webstyle_wrap{
+
+.webstyle_wrap {
 	display: inline-block;
 }
 
 @media screen and (max-width: 499px) {
-.share_button{
-	margin: 0 3px 0;
-}
+
+	/* 499px以下の幅の場合に適用される */
+	.share_button {
+		margin: 0 3px 0;
+	}
 }
