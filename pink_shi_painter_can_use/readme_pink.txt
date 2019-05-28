@@ -92,56 +92,6 @@ UTF-8対応のテキストエディタで編集することをおすすめしま
 
 この変数の文法を間違えたり、必要な箇所を削除すると掲示板が表示されなくなるため注意が必要です。
 
-掲示板の説明文
-
-pink_main.html
-
-の
-
-<!-- 掲示板の説明 -->
-<div class="howtouse">楽しくお絵描き。</div>
-
-の箇所を必要に応じて書き換えてください。
-
-キャンバスのサイズを数字で入力するのは面倒なので、
-セレクトボックスにしましたが、
-
-config.phpの設定と連動していません。
-必要に応じてテンプレートの以下の箇所を書き換えてください。
-
-（該当するファイル）
-
-pink_main.html
-pink_res.html
-
-<!--CANVAS_SELECT-->
-<span class="canvas_size">Size</span>：
-<select name="picw" title="幅" class="canvas_select">
-	
-	<option value="300" selected>300</option>
-	<option value="350">350</option>
-	<option value="400">400</option>
-	<option value="450">450</option>
-	<option value="500">500</option>
-	<option value="550">550</option>
-	<option value="600">600</option>
-</select>
-
-
-600よりも大きなサイズで描きたい場合は
-
-	…
-	<option value="600">600</option>
-	<option value="650">650</option>
-	<option value="700">700</option>
-	<option value="800">800</option>
-</select>
-
-のように追加します。
-
-HTMLタグ/フォームタグ/セレクトボックスを作る - TAG index
-http://www.tagindex.com/html_tag/form/select.html
-
 ■特徴
 
 //お絵かき機能を使用する お絵かきのみ:2 する:1 しない:0
