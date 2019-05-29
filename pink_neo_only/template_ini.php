@@ -1,11 +1,11 @@
 <?php
 /*
-  * Template - PINK - lot.190529  by さとぴあ  >> http://stp.sblo.jp/
+  * Template - PINK - lot.190530  by さとぴあ  >> http://stp.sblo.jp/
   *
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.190529");
+define('TEMPLATE_VER', "lot.190530");
 
 
 /* ---------- ADD:2004/06/22 ---------- */

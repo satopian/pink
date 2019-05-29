@@ -58,7 +58,6 @@ select {
 }
 
 select {
-	font-size: 13px;
 	margin: 0;
 }
 
@@ -509,8 +508,6 @@ a:hover {
 }
 
 .mente_wrap select {
-	font-size: 13px;
-	color: #666666;
 	height: 21px;
 	padding: 0 0 0 2px;
 	vertical-align: middle;
@@ -966,9 +963,7 @@ a:hover {
 }
 
 .canvas_select {
-	width: 52px;
 	height: 25px;
-	letter-spacing: 0;
 }
 
 #res_paint_form {
