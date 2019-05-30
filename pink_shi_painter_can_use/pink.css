@@ -605,11 +605,6 @@ a:hover {
 	text-decoration: none;
 }
 
-.catalog_title a:hover {
-	color: #8a8a8a;
-	text-decoration: none;
-}
-
 .catalog_name {
 	margin: 3px 0 0;
 	overflow: hidden;
