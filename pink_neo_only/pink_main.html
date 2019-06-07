@@ -89,16 +89,13 @@ PMAX_H //高さ
 )-->
 <span class="canvas_size">Size</span>：<select name="picw" title="幅" class="canvas_select">
 <?php
-$c_w=array();//横幅 300から、PMAX_W で設定された最大値まで。
+//幅 300から、PMAX_W で設定した最大値まで。
 	for($i = 300; $i <=PMAX_W ; $i+=50){//50ずつ増える
-	$c_w[]=$i;
-		}
-	foreach($c_w as $vc_w){
-	if(PDEF_W==$vc_w){
-	echo'<option value="'.$vc_w.'" selected>'.$vc_w.'</option>';
+	if(PDEF_W==$i){//デフォルトサイズ
+	echo'<option value="'.$i.'" selected>'.$i.'</option>';
 	}
 	else{
-	echo'<option value="'.$vc_w.'">'.$vc_w.'</option>';
+	echo'<option value="'.$i.'">'.$i.'</option>';
 	}
 	}
 ?>
@@ -106,16 +103,13 @@ $c_w=array();//横幅 300から、PMAX_W で設定された最大値まで。
 x
 <select name="pich" title="高さ" class="canvas_select">
 <?php
-$c_h=array();//縦幅 300から、PMAX_H で設定された最大値まで。
+//高さ 300から、PMAX_H で設定した最大値まで。
 	for($i = 300; $i <=PMAX_H ; $i+=50){//50ずつ増える
-	$c_h[]=$i;
-		}
-	foreach($c_h as $vc_h){
-	if(PDEF_H==$vc_h){
-	echo'<option value="'.$vc_h.'" selected>'.$vc_h.'</option>';
+	if(PDEF_H==$i){//デフォルトサイズ
+	echo'<option value="'.$i.'" selected>'.$i.'</option>';
 	}
 	else{
-	echo'<option value="'.$vc_h.'">'.$vc_h.'</option>';
+	echo'<option value="'.$i.'">'.$i.'</option>';
 	}
 	}
 ?>
