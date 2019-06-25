@@ -5,7 +5,7 @@
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.190607");
+define('TEMPLATE_VER', "lot.190625");
 
 
 /* ---------- ADD:2004/06/22 ---------- */
