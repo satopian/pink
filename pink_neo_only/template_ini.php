@@ -1,6 +1,6 @@
 <?php
 /*
-  * Template - PINK - lot.190607  by さとぴあ  >> http://stp.sblo.jp/
+  * Template - PINK - lot.190625  by さとぴあ  >> http://stp.sblo.jp/
   *
 */
 
@@ -97,19 +97,18 @@ define('OTHER_PAGE', '<span class="parentheses">[<span class="page_number"><a hr
 /* -------------------- */
 
 //メインのテンプレートファイル
-define('MAINFILE', "pink_main.html");
-
+define('MAINFILE', __DIR__.'/pink_main.html');
 //レスのテンプレートファイル
-define('RESFILE', "pink_res.html");
+define('RESFILE', __DIR__.'/pink_res.html');
 
 //その他のテンプレートファイル
-define('OTHERFILE', "pink_other.html");
+define('OTHERFILE', __DIR__.'/pink_other.html');
 
 //お絵かきのテンプレートファイル
-define('PAINTFILE', "pink_paint.html");
+define('PAINTFILE', __DIR__.'/pink_paint.html');
 
 //カタログのテンプレートファイル
-define('CATALOGFILE', "pink_catalog.html");
+define('CATALOGFILE', __DIR__.'/pink_catalog.html');
 
 //カタログの列数(横)
 define('CATALOG_X', '3');
