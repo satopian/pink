@@ -203,8 +203,8 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 <div class="clear"></div>
 <!--(========== お絵かきフォーム欄 ==========)-->
 <!--{def paintform}-->
-<div id="res_paint_form">
 <!--(========== 実際のお絵かきフォーム ==========)-->
+<div id="res_paint_form">
 <!--{def paint}-->
 <form action="{$self}" method="post">
 <!--(========== お絵かきアプレット ==========)-->
@@ -265,7 +265,7 @@ x
 // anime…動画記録機能を使用するとき true が入る
 // animechk…動画記録をデフォルトでチェックするとき ' checked' が入る
 )-->
-<!--{def resno}--><input type="hidden" name="resto" value="{$resno}"><!--{/def}-->
+<input type="hidden" name="resto" value="{$resno}">
 <input type="hidden" name="mode" value="paint"></form>
 </div>
 <!--{/def}-->
@@ -296,7 +296,7 @@ x
 <!--{def form}-->
 <form action="{$self}" method="POST" enctype="multipart/form-data" id="post_form">
 <input type="hidden" name="mode" value="regist">
-<!--{def resno}--><input type="hidden" name="resto" value="{$resno}"><!--{/def}-->
+<input type="hidden" name="resto" value="{$resno}">
 <input type="hidden" name="MAX_FILE_SIZE" value="{$maxbyte}">
 <!--(
 // maxbyte…最大投稿サイズ(Byte)

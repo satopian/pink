@@ -58,7 +58,6 @@
 <div class="menu_pr"></div>
 <div class="clear"></div>
 <!--(========== お絵かきフォーム欄 ==========)-->
-<!--{def paintform}-->
 <!--(========== 実際のお絵かきフォーム ==========)-->
 <!--{def paint}-->
 <form action="{$self}" method="post">
@@ -144,7 +143,6 @@ x
 // potitag…独自タグ機能を使用するとき true が入る
 // addinfo…追加お知らせ
 )-->
-  <!--{/def}-->
 </div>
 </header>
 <nav>
@@ -382,13 +380,6 @@ x
 </tr>
 <tr><td class="minres_title">本文</td><td colspan="3"><textarea name="com" wrap="soft" class="minres_input_com"></textarea></td></tr>
 <tr><td colspan="2">
-<!--(========== 文字色指定(リストから選択する方法) ==========)-->
-<!--{def fctable}-->
-文字色<select name="fcolor" class="minres_input_other color_select"><!--{each fctable}--><option value="{$fctable/color}" style="color:{$fctable/color};">{$fctable/name}</option><!--{/each}--></select>
-<!--(
-// fctable/name…文字色の名称
-)-->
-<!--{/def}-->
 </td>
 <td colspan="2">削除キー<input type="password" name="pwd" value="" class="minres_input_other" autocomplete="current-password"></td>
 </tr>
@@ -400,7 +391,7 @@ x
 <!--(========== ミニレスフォームを表示させない場合は返信ボタンを表示 ==========
 // なぜかndefの挙動がオカシイのでifneで代用
 )-->
-<!--{ifne resform:true}--><!--{def notres}-->
+<!--{ifne resform:true}-->
 <div class="res_button_wrap">
 <!--{def sharebutton}-->
 <span class="share_button">
@@ -413,7 +404,7 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 	</span>
 <!--{/def}-->
 	<form action="{$self}?res={$oya/no}" method="post"><input type="submit" value="返信" class="res_button"></form><span class="page_top"><a href="#top">△</a></span></div>
-<!--{/def}--><!--{/ifne}-->
+<!--{/ifne}-->
 <hr>
 <!-- /thread -->
 </article>
@@ -422,7 +413,6 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 <!--(========== 親記事グループここまで ==========)-->
 <footer>
 <!--(========== メイン時ページング表示 ==========)-->
-<!--{def notres}-->
 <nav>
 <div id="paging_wrap">{$paging}</div>
 <div class="pagelink">
@@ -436,7 +426,6 @@ document.write( '<a target="_blank" href="https://twitter.com/intent/tweet?&text
 // paging…ページングデータ
 // next…次ページURL
 )-->
-<!--{/def}-->
 
 <!--(========== メンテナンスフォーム欄 ==========)-->
 <form action="{$self}" method="post">
