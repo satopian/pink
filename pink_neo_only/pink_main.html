@@ -40,7 +40,6 @@
 <nav>
 <div class="bbsmenu">
 [<a href="{$home}" target="_top">ホーム</a>]
-[<a href="" onClick="location.reload();return false">更新</a>]
 [<a href="{$self}?mode=catalog">カタログ</a>]
 <!-- [<a href="{$self}?mode=newpost">新規投稿</a>] -->
 <span class="txtnon">[<a href="{$self}?mode=piccom">未投稿画像</a>]</span>
@@ -62,18 +61,6 @@
 <!--{def paint}-->
 <form action="{$self}" method="post">
 <input name="submit" type="submit" value="PAINT" class="paint_button">
-<!--(========== お絵かきアプレット ==========)-->
-<!--(
-{def applet}
-<select name="shi" class="select_applet">
-{def usepbbs}
-<option value="0">PaintBBS</option>
-{/def}
-<option value="1">しぃペインター</option>
-<option value="2">しぃペインターPro</option>
-</select>
-{/def}
-)-->
 <!--(===キャンバスサイズ 設定はconfig.phpで ===)-->
 <!--(
 config.phpで設定した
@@ -134,6 +121,7 @@ x
 <!--{/def}-->
 {$addinfo}
 </ul>
+</div>
   <!--{/def}-->
   <!--(
 // pmaxw…お絵かき最大サイズ(横)
@@ -143,7 +131,6 @@ x
 // potitag…独自タグ機能を使用するとき true が入る
 // addinfo…追加お知らせ
 )-->
-</div>
 </header>
 <nav>
 <div class="pagelink">
@@ -153,94 +140,6 @@ x
 <div class="pagelink_next"><!--{def next}--><a href="{$next}">次へ≫</a><!--{/def}--></div>
 </div>
 	</nav>
-<!--(========== 投稿フォーム欄 ==========)-->
-<!--{def form}-->
-<form action="{$self}" method="POST" enctype="multipart/form-data" id="post_form">
-<input type="hidden" name="mode" value="regist">
-<input type="hidden" name="MAX_FILE_SIZE" value="{$maxbyte}">
-<!--(
-// maxbyte…最大投稿サイズ(Byte)
-)-->
-<table id="post_table">
- <tr>
-  <td class="post_table_title">名前<!--{def usename}-->(必須)<!--{/def}--></td>
-  <td><input type="text" name="name" class="post_input_text" autocomplete="username"></td>
- </tr>
- <tr>
-  <td class="post_table_title">E-mail</td>
-  <td><input type="text" name="email" class="post_input_text" autocomplete="email"></td>
- </tr>
- <tr>
-  <td class="post_table_title">URL</td>
-  <td><input type="url" name="url" class="post_input_text" autocomplete="url"></td>
- </tr>
- <tr>
-  <td class="post_table_title">題名<!--{def usesub}-->(必須)<!--{/def}--></td>
-  <td><input type="text" name="sub" value="{$resub}" class="post_input_text" autocomplete="off"></td>
- </tr>
- <tr>
-  <td class="post_table_title">本文<!--{def usecom}-->(必須)<!--{/def}--></td>
-  <td><textarea name="com" wrap="soft" class="post_input_com"></textarea></td>
- </tr>
-<!--(
-// usename…名前が必須だと ' *' が入る
-// usesub…題名が必須だと ' *' が入る
-// usecom…本文が必須だと ' *' が入る
-// resub…レス時の返信用題名(Re: ～)
-)-->
-<!--(========== 文字色指定(■に色付けてチェックボタンで選択する方法) ==========)-->
-<!--{def fctable}-->
- <tr>
-  <td class="post_table_title">文字色</td>
-  <td><!--{each fctable}--><span class="nk"><label class="radio"><input type="radio" name="fcolor" value="{$fctable/color}"><span style="color:{$fctable/color};">■</span></label>
-  </span> <!--{/each}--></td>
- </tr>
-<!--(
-// fctable…文字色配列
-// fctable/color…色コードまたは色名
-)-->
-<!--{/def}-->
-<!--(========== ファイルアップロード欄 ==========)-->
-<!--{def upfile}-->
- <tr>
-  <td class="post_table_title">添付画像</td>
-  <td><input type="file" name="upfile"><label class="checkbox"> <input type="checkbox" name="textonly" value="on">画像なし</label></td>
- </tr>
-<!--(
-// レス時は画像なしにデフォでチェックする(文字レス優先)
-)-->
-<!--{/def}-->
- <tr>
-  <td class="post_table_title">削除キー</td>
-  <td><input type="password" name="pwd" value="" class="post_input_pass" autocomplete="current-password">
-    (記事の編集削除用。英数字で)</td>
- </tr>
- <tr><td colspan="2" style="text-align: center;" class="post_table_submit td_noborder"><input type="submit" value="送信する" class="post_submit"></td></tr>
- <tr>
-  <td colspan="2" class="td_noborder">
-<ul id="up_desc">
-<!--(========== ファイルアップロード時の説明 ==========)-->
-<!--{def upfile}-->
-<li>添付可能ファイル：GIF, JPG, PNG ブラウザによっては正常に添付できないことがあります。</li>
-<li>画像は横 {$maxw}ピクセル、縦 {$maxh}ピクセルを超えると縮小表示されます。</li>
-<!--{/def}-->
-<li><!--{def upfile}-->最大投稿データ量は {$maxkb} KB までです。<!--{/def}-->sageるときはE-mail欄にsageを入れてね。</li>
-<!--{def potitag}-->
-<li>独自タグが使用できます … <a href="{$self}?mode=tag" target="_blank" rel="noopener noreferrer">独自タグ説明</a></li>
-<!--{/def}-->
-{$addinfo}
-</ul></td></tr>
-</table>
-</form>
-<!--{/def}-->
-
-<!--{def notres}-->
-<!--(
-// prev…前ページURL
-// paging…ページングデータ
-// next…次ページURL
-)-->
-<!--{/def}-->
 <!--(========== 親記事グループ ==========)-->
 <!--{each oya}-->
 
