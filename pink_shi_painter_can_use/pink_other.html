@@ -69,6 +69,60 @@
     </nav>
 </header>
 <!--{def admin}-->
+<!--{def regist}-->
+<form action="{$self}" method="post" enctype="multipart/form-data">
+
+<input name="submit" type="submit" value="PAINT" class="paint_button">
+<input type="hidden" name="shi" value="1">
+<!--(===キャンバスサイズ 設定はconfig.phpで ===)-->
+<!--(
+config.phpで設定した
+//お絵描きデフォルトサイズ(最初に選択される数値)
+PDEF_W //幅
+PDEF_H// 高さ
+//お絵描き最大サイズ
+PMAX_W //幅
+PMAX_H //高さ
+が入ります。
+)-->
+<span class="canvas_size">Size</span>：<select name="picw" title="幅" class="canvas_select">
+<?php
+//幅 300から、PMAX_W で設定した最大値まで。
+	for($i = 300; $i <=PMAX_W ; $i+=50){//50ずつ増える
+	if(PDEF_W==$i){//デフォルトサイズ
+	echo'<option value="'.$i.'" selected>'.$i.'</option>';
+	}
+	else{
+	echo'<option value="'.$i.'">'.$i.'</option>';
+	}
+	}
+?>
+</select>
+x
+<select name="pich" title="高さ" class="canvas_select">
+<?php
+//高さ 300から、PMAX_H で設定した最大値まで。
+	for($i = 300; $i <=PMAX_H ; $i+=50){//50ずつ増える
+	if(PDEF_H==$i){//デフォルトサイズ
+	echo'<option value="'.$i.'" selected>'.$i.'</option>';
+	}
+	else{
+	echo'<option value="'.$i.'">'.$i.'</option>';
+	}
+	}
+?>
+</select>&nbsp;
+<!--(===キャンバスサイズ ここまで ===)-->
+<span class="neo_checknon">
+<label class="checkbox"><input type="checkbox" name="useneo" checked="checked" /><span class="use_neo">NEOを使う</span></label>
+	</span>
+	<span class="anime_checkbox">
+<label class="checkbox"><input type="checkbox" value="true" name="anime"{$animechk}><span class="use_animation">動画記録</span></label></span>
+<input name="pch_upload" type="file" />
+<input type="hidden" name="admin" value="{$admin}">
+<input type="hidden" name="mode" value="paint"></form>
+<!--{/def}-->
+
 <div class="centering">タグがつかえます</div>
 <!--{/def}-->
 <!--(========== 投稿待ちのお絵かき画像表示 ==========)-->
