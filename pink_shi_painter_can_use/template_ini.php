@@ -1,6 +1,6 @@
 <?php
 /*
-  * Template - PINK - lot.190625  by さとぴあ  >> http://stp.sblo.jp/
+  * Template - PINK - lot.19905  by さとぴあ  >> http://stp.sblo.jp/
   *
 */
 
