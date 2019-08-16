@@ -162,11 +162,11 @@ x
 <!--{def oya/src}--><!--{def oya/painttime}--><span class="article_info_painttime">描画時間:{$oya/painttime}</span><!--{/def}--><!--{/def}-->
 <!--{def oya/updatemark}--><span class="article_info_desc">{$oya/updatemark}</span> <!--{/def}-->
 </div>
-<div class="article_img_info">
 <!--{def oya/src}-->
+<div class="article_img_info">
 <!--{def oya/continue}--><span class="article_info_continue">☆<a href="{$self}?mode=continue&no={$oya/continue}">続きを描く</a></span> <!--{/def}--> <!--{def oya/pch}--><!--{def oya/continue}-->| <!--{/def}--><span class="article_info_animation">☆<a href="{$self}?mode=openpch&pch={$oya/pch}" target="_blank">動画</a></span><!--{/def}-->
-<!--{/def}-->
 </div>
+<!--{/def}-->
 <!--(========== 親記事ヘッダここまで ==========)-->
 <!--(
 // oya…親記事配列
@@ -221,16 +221,18 @@ x
 <div class="res_article_wrap">
 <!--(レス記事ヘッダここから)-->
 <div class="res_article_title">[{$oya/res/no}] {$oya/res/sub}</div>
+<div class="article_info">
 <span class="article_info_name"><!--{def oya/res/email}--><a href="mailto:{$oya/res/email}"><!--{/def}-->{$oya/res/name}<!--{def oya/res/email}--></a><!--{/def}--></span><!--{def oya/res/url}--><span class="article_info_desc">[<a href="{$oya/res/url}" target="_blank" rel="nofollow noopener noreferrer">URL</a>]</span> <!--{/def}-->
 <!--{def oya/res/id}--><span class="article_info_desc">ID:{$oya/res/id}</span> <!--{/def}-->
 <span class="article_info_desc">{$oya/res/now}</span>
 <!--{def oya/res/src}--><!--{def oya/res/painttime}--><span class="article_info_painttime">描画時間:{$oya/res/painttime}</span><!--{/def}--><!--{/def}-->
 <!--{def oya/res/updatemark}--><span class="article_info_desc">{$oya/res/updatemark}</span> <!--{/def}-->
-<div class="article_img_info">
-<!--{def oya/res/src}-->
-<!--{def oya/res/continue}--><span class="article_info_continue">☆<a href="{$self}?mode=continue&no={$oya/res/continue}">続きを描く</a></span><!--{/def}--> <!--{def oya/res/pch}--><!--{def oya/res/continue}-->| <!--{/def}--><span class="article_info_animation">☆<a href="{$self}?mode=openpch&pch={$oya/res/pch}" target="_blank">動画</a></span><!--{/def}-->
-<!--{/def}-->
 </div>
+<!--{def oya/res/src}-->
+<div class="article_img_info">
+<!--{def oya/res/continue}--><span class="article_info_continue">☆<a href="{$self}?mode=continue&no={$oya/res/continue}">続きを描く</a></span><!--{/def}--> <!--{def oya/res/pch}--><!--{def oya/res/continue}-->| <!--{/def}--><span class="article_info_animation">☆<a href="{$self}?mode=openpch&pch={$oya/res/pch}" target="_blank">動画</a></span><!--{/def}-->
+</div>
+<!--{/def}-->
 <!--(レス記事ヘッダここまで)-->
 
 <!--(

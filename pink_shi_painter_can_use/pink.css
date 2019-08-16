@@ -11,8 +11,8 @@ body,
 td {
 	color: #666666;
 	font-family: "Hiragino Sans", meiryo, ヒラギノ角ゴシック, メイリオ, sans-serif;
-	font-size: 15px;
-	letter-spacing: 0.08em;
+	font-size: 16px;
+	letter-spacing: 0.09em;
 	word-break: break-all;
 }
 
@@ -265,7 +265,7 @@ a:hover {
 
 .article_info {
 	padding: 0;
-	margin: 5px 0 5px;
+	margin: 5px 0 8px;
 }
 
 .article_info_desc {
@@ -290,7 +290,7 @@ a:hover {
 }
 
 .article_img_info {
-	margin: 2px 0 12px;
+	margin: 3px 0 14px;
 }
 
 .res_article_img_info {
@@ -303,7 +303,7 @@ a:hover {
 	margin: 0 0 12px;
 	display: table;
 	min-width: 200px;
-	line-height: 175%;
+	line-height: 185%;
 	/*	letter-spacing: 0.08em;*/
 }
 
@@ -357,8 +357,7 @@ a:hover {
 
 .share_button {
 	display: inline-block;
-	margin: 0 3px -1px;
-	font-size: 15.5px;
+	margin: 0 3px 0;
 	vertical-align: bottom;
 }
 
@@ -433,6 +432,7 @@ a:hover {
 	margin: 1em 0 -0.5em;
 	line-height: 2em;
 	text-align: center;
+	font-size: 15px;
 }
 
 .page_number {
@@ -895,27 +895,24 @@ a:hover {
 @media screen and (max-width: 555px) {
 
 	/* 555px以下の幅の場合に適用される */
-	.menu_pr,
-	.res_menu_pr,
 	#res_paint_form,
 	.howtopaint,
 	.txtnon,
-	.article_info_painttime {
+	.article_info_painttime,.neo_checknon {
 		display: none;
 	}
 }
-
-@media screen and (max-width: 510px) {
-
-	/* 510px以下の幅の場合に適用される */
-	.neo_checknon {
-		display: none;
+@media screen and (max-width:620px) {
+		.menu_pr,
+	.res_menu_pr {
+		display: none
 	}
 }
+
 
 .article_info_name {
 	padding-right: 6px;
-	font-size: 15.5px;
+	font-size: 16.5px;
 	color: #808080;
 	font-weight: 600;
 }
@@ -993,12 +990,4 @@ a:hover {
 
 .webstyle_wrap {
 	display: inline-block;
-}
-
-@media screen and (max-width: 499px) {
-
-	/* 499px以下の幅の場合に適用される */
-	.share_button {
-		margin: 0 3px 0;
-	}
 }
