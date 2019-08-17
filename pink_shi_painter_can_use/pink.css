@@ -101,7 +101,7 @@ a:hover {
 /* ヘッダー */
 #bbs_title {
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: 700;
 	line-height: 120%;
 	max-width: 928px;
 	border-bottom: 1px dashed;
@@ -249,7 +249,7 @@ a:hover {
 	font-size: 18px;
 	line-height: 115%;
 	background-color: #ffb5e6;
-	font-weight: bold;
+	font-weight: 700;
 	border-left: 8px solid;
 	border-bottom: 1px dashed;
 	color: #888888;
@@ -320,7 +320,7 @@ a:hover {
 }
 
 .article_limit {
-	font-weight: bold;
+	font-weight: 700;
 	text-align: right;
 	color: #ff88cc;
 }
@@ -552,7 +552,7 @@ a:hover {
 .catalog_title {
 	line-height: 125%;
 	background-color: #ffb5e6;
-	font-weight: bold;
+	font-weight: 700;
 	margin: 0 0 1px 0;
 	padding: 4px 5px;
 	letter-spacing: 0.08em;
@@ -694,7 +694,7 @@ a:hover {
 }
 
 .hensyu {
-	font-weight: bold;
+	font-weight: 700;
 	color: #ff88cc;
 }
 
@@ -898,7 +898,7 @@ a:hover {
 	#res_paint_form,
 	.howtopaint,
 	.txtnon,
-	.article_info_painttime,.neo_checknon {
+	.article_info_painttime,.neo_checkbox {
 		display: none;
 	}
 }
@@ -913,24 +913,19 @@ a:hover {
 .article_info_name {
 	padding-right: 6px;
 	font-size: 16.5px;
-	color: #808080;
+	color: gray;
 	font-weight: 600;
 }
 
 /* メールのリンク下線の色と不透明度 */
 .article_info_name a {
 	text-decoration-color: #6666668a;
-	color: #808080;
+	color: gray;
 }
 
-.use_neo {
-	font-weight: bold;
-	color: #808080;
-}
-
-.use_animation {
-	font-weight: bold;
-	color: #808080;
+.use_neo,.use_animation {
+	font-weight: 700;
+	color: gray;
 }
 
 .potitag_mode {
@@ -950,8 +945,8 @@ a:hover {
 }
 
 .canvas_size {
-	font-weight: bold;
-	color: #808080;
+	font-weight: 700;
+	color: gray;
 }
 
 .canvas_select {
