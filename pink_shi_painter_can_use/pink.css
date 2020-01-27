@@ -67,6 +67,7 @@ input[type="file"] {
 }
 
 input:-webkit-autofill {
+	box-shadow: 0 0 0 1000px white inset;
 	-webkit-box-shadow: 0 0 0 1000px white inset;
 }
 
@@ -985,4 +986,7 @@ a:hover {
 
 .webstyle_wrap {
 	display: inline-block;
+}
+label{
+	cursor:pointer;
 }
