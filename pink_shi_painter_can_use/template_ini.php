@@ -1,11 +1,11 @@
 <?php
 /*
-  * Template - PINK - lot.200115  by さとぴあ  >> http://stp.sblo.jp/
+  * Template - PINK - lot.200305  by さとぴあ  >> http://stp.sblo.jp/
   *
 */
 
 //テンプレートのバージョン
-define('TEMPLATE_VER', "lot.200115");
+define('TEMPLATE_VER', "lot.200305");
 
 
 /* ---------- ADD:2004/06/22 ---------- */
@@ -46,7 +46,7 @@ define('MSG033', "削除に失敗しました<br>ユーザーに削除権限が�
 define('MSG034', "アップロードに失敗しました<br>規定の画像容量をオーバーしています");
 define('MSG035', "日本語で何か書いてください。");
 define('MSG036', "本文にURLを書く事はできません。");
-define('MSG037', "予備");
+define('MSG037', "その名前は使えません。");
 define('MSG038', "そのタグは使えません。");
 define('MSG039', "予備");
 define('MSG040', "予備");
