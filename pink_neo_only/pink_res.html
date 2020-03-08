@@ -64,7 +64,7 @@
 <!--{each oya}-->
 <article>
 <!--(========== 親記事ヘッダここから ==========)-->
-<h2 class="article_title"><a href="{$self}?res={$oya/no}">[{$oya/no}] {$oya/sub}</a></h2>
+<h2 class="article_title">[{$oya/no}] {$oya/sub}</h2>
 <div class="article_info">
 <span class="article_info_name"><!--{def oya/email}--><a href="mailto:{$oya/email}"><!--{/def}-->{$oya/name}<!--{def oya/email}--></a><!--{/def}--></span><!--{def oya/url}--><span class="article_info_desc">[<a href="{$oya/url}" target="_blank" rel="nofollow noopener noreferrer">URL</a>]</span> <!--{/def}-->
 <!--{def oya/id}--><span class="article_info_desc">ID:{$oya/id}</span> <!--{/def}-->
@@ -96,7 +96,7 @@
 // oya/thumb…サムネイルがあるとき true が入る
 )-->
 <!--{def oya/src}-->
-<div class="posted_image"><a href="{$oya/src}" target="_blank" rel="noopener"><img src="{$oya/imgsrc}" width="{$oya/w}" height="{$oya/h}" alt="{$oya/sub} by {$oya/name} ({$oya/size} B)" title="{$oya/sub} by {$oya/name} ({$oya/size} B) <!--{def oya/thumb}-->サムネイル縮小表示<!--{/def}-->"></a>
+<div class="posted_image"><!--{def oya/thumb}--><a href="{$oya/src}" target="_blank" rel="noopener"><!--{/def}--><img src="{$oya/imgsrc}" width="{$oya/w}" height="{$oya/h}" alt="{$oya/sub} by {$oya/name} ({$oya/size} B)" title="{$oya/sub} by {$oya/name} ({$oya/size} B) <!--{def oya/thumb}-->サムネイル縮小表示<!--{/def}-->"><!--{def oya/thumb}--></a><!--{/def}-->
 </div>
 <!--{/def}--><div class="comment"> {$oya/com}</div>
 <!--(
@@ -161,7 +161,7 @@
 // oya/res/continue…コンティニュー用引数(フラグ兼用)
 // oya/res/thumb…サムネイルがあるとき true が入る
 )-->
-<!--{def oya/res/src}--><div class="posted_image"><a href="{$oya/res/src}" target="_blank" rel="noopener"><img src="{$oya/res/imgsrc}" width="{$oya/res/w}" height="{$oya/res/h}" alt="{$oya/res/sub} by {$oya/res/name} ({$oya/res/size} B)" title="{$oya/res/sub} by {$oya/res/name} ({$oya/res/size} B) <!--{def oya/res/thumb}-->サムネイル縮小表示<!--{/def}-->"></a>
+<!--{def oya/res/src}--><div class="posted_image"><!--{def oya/res/thumb}--><a href="{$oya/res/src}" target="_blank" rel="noopener"><!--{/def}--><img src="{$oya/res/imgsrc}" width="{$oya/res/w}" height="{$oya/res/h}" alt="{$oya/res/sub} by {$oya/res/name} ({$oya/res/size} B)" title="{$oya/res/sub} by {$oya/res/name} ({$oya/res/size} B) <!--{def oya/res/thumb}-->サムネイル縮小表示<!--{/def}-->"><!--{def oya/res/thumb}--></a><!--{/def}-->
 </div><!--{/def}-->
 <div class="comment"> {$oya/res/com}</div>
 <!--(
