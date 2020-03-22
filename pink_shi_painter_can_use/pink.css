@@ -154,7 +154,9 @@ a:hover {
 	margin: 10px auto 15px;
 	max-width: 928px;
 }
-
+.post_t_margin {
+    margin: 12px 0 0;
+}
 #post_table input {
 	font-size: inherit;
 }
@@ -230,7 +232,7 @@ a:hover {
 
 @media screen and (max-width: 499px) {
 	#post_table {
-		margin: 12px 0 0;
+		/* margin: 12px 0 0; */
 		width: 100%;
 		line-height: 1em;
 	}

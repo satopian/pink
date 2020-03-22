@@ -137,6 +137,82 @@ x
 // addinfo…追加お知らせ
 )-->
 </header>
+<!--(========== 投稿フォーム欄 ==========)-->
+<!--{def form}-->
+<form action="{$self}" method="POST" enctype="multipart/form-data" id="top_post_form">
+	<input type="hidden" name="mode" value="regist">
+	<input type="hidden" name="MAX_FILE_SIZE" value="{$maxbyte}">
+	<!--(
+	// maxbyte…最大投稿サイズ(Byte)
+	)-->
+	<!--{def paint}-->
+	<div class="post_t_margin">
+	</div>
+	<!--{/def}-->
+	
+		<table id="post_table">
+	 <tr>
+	  <td class="post_table_title">名前<!--{def usename}-->(必須)<!--{/def}--></td>
+	  <td><input type="text" name="name" class="post_input_text" autocomplete="username"></td>
+	 </tr>
+	 <tr>
+	  <td class="post_table_title">E-mail</td>
+	  <td><input type="text" name="email" class="post_input_text" autocomplete="email"></td>
+	 </tr>
+	 <tr>
+	  <td class="post_table_title">URL</td>
+	  <td><input type="text" name="url" class="post_input_text" autocomplete="url"></td>
+	 </tr>
+	 <tr>
+	  <td class="post_table_title">題名<!--{def usesub}-->(必須)<!--{/def}--></td>
+	  <td><input type="text" name="sub" value="{$resub}" class="post_input_text" autocomplete="off"></td>
+	 </tr>
+	 <tr>
+	  <td class="post_table_title">本文<!--{def usecom}-->(必須)<!--{/def}--></td>
+	  <td><textarea name="com" wrap="soft" class="post_input_com"></textarea></td>
+	 </tr>
+	<!--(
+	// usename…名前が必須だと ' *' が入る
+	// usesub…題名が必須だと ' *' が入る
+	// usecom…本文が必須だと ' *' が入る
+	// resub…レス時の返信用題名(Re: ～)
+	)-->
+	<!--(========== 文字色指定(■に色付けてチェックボタンで選択する方法) ==========)-->
+		<!--(========== ファイルアップロード欄 ==========)-->
+	<!--{def upfile}-->
+	 <tr>
+	  <td class="post_table_title">添付画像</td>
+	  <td><input type="file" name="upfile"><label class="howtoedit"><input type="checkbox" name="textonly" value="on"<!--{def resno}--> checked<!--{/def}-->>画像なし</label></td>
+	 </tr>
+	<!--(
+	// レス時は画像なしにデフォでチェックする(文字レス優先)
+	)-->
+	<!--{/def}-->
+	 <tr>
+	  <td class="post_table_title">削除キー</td>
+	  <td><input type="password" name="pwd" value="" class="post_input_pass" autocomplete="current-password"><span class="howtoedit">(記事の編集削除用。英数字で)</span></td>
+	 </tr>
+	 <tr><td colspan="2" style="text-align: center;" class="post_table_submit td_noborder"><input type="submit" value="送信する" class="post_submit">
+	</td></tr>
+	 <tr>
+	  <td colspan="2" class="td_noborder">
+	<!--(========== ファイルアップロード時の説明 ==========)-->
+	<!--{def upfile}-->
+	<div class="howtowrite">
+	<ul id="up_desc">
+	<li>画像は横 {$maxw}ピクセル、縦 {$maxh}ピクセルを超えると縮小表示されます。</li>
+	<!--{/def}-->
+	<li>最大投稿データ量は {$maxkb} KB までです。sageるときはE-mail欄にsageを入れてね。</li>
+	<!--{def potitag}-->
+	<li>独自タグが使用できます … <a href="{$self}?mode=tag" target="_blank" rel="noopener">独自タグ説明</a></li>
+	<!--{/def}-->
+	{$addinfo}
+	</ul>
+	</div>
+	</td></tr>
+	</table>
+	</form>
+	<!--{/def}-->
 <nav>
 <div class="pagelink">
 <div class="pagelink_prev"><!--{def prev}--><a href="{$prev}">≪前へ</a><!--{/def}-->
