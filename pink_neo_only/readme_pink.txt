@@ -120,7 +120,7 @@ define('SHARE_BUTTON', '0');
 シェアボタンを使う場合は、
 
 //設置場所のURL。'/'まで
-define('ROOT_URL', 'http://www.xxx.com/poti/');
+define('ROOT_URL', 'http://www.hoge.ne.jp/');
 
 の設定が必要です。
 
