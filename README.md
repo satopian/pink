@@ -82,6 +82,16 @@ NEOのみのテンプレートにはこの機能はありません。
 古いバージョンのPOTI-boardでは機能しませんのでご注意ください。
 
 ## 履歴
+#### [2020/04/13] PINK lot.200413
+
+- PaintBBS NEO ver1.5.5 に対応しました。
+- ツールパレットの左右切り替えができるようになりました。
+
+詳細は[こちら](https://github.com/satopian/pink/issues/1)
+
+![Screen-2020-04-13_18-24-20](https://user-images.githubusercontent.com/44894014/79111471-8f024800-7db7-11ea-8c66-32d045c188db.png)
+
+
 #### [2019/09/24] PINK lot.190924
 
 - [POTI-board改](https://sakots.red/poti/) v1.53.5 lot.190921 で追加された新しい機能に対応。
