@@ -106,7 +106,14 @@ document.paintBBSCallback = function (str) {
 )-->
 <!--{def paint_mode}-->
 <nav>
-<div style= "min-width:calc({$w}px + 176px)" id="self2"> [<a href="{$self2}">{$title}</a>] </div>
+<div style= "min-width:calc({$w}px + 176px)" id="self2"> [<a href="{$self2}">{$title}</a>] 
+<!--{def paintbbs}-->
+<span class="nts_radiowrap">ツールを
+	<input type="radio" name="1" id="1" onclick="Neo.setToolSide(true)" class="nts_radio"><label class="ntslabel" for="1">左へ</label>
+	<input type="radio" name="1" id="2" onclick="Neo.setToolSide(false)" checked="checked" class="nts_radio"><label class="ntslabel" for="2">右へ</label>
+</span>
+<!--{/def}-->
+</div>
 </nav>
 </header>
 <!--(========== 動的パレットスクリプト ここから ==========)-->

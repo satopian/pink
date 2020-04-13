@@ -992,3 +992,31 @@ a:hover {
 label{
 	cursor:pointer;
 }
+/* ツール左右切り替え */
+.nts_radio {
+	display: none;
+}
+
+.ntslabel {
+	color: #6f6f6f;
+	display: inline-block;
+	padding: 0 10px;
+	text-align: center;
+	cursor: pointer;
+	border: 2px solid #ffbde8;
+	border-radius: 15px;
+}
+
+input[type=radio]:checked+label {
+	color: #626262;
+	background: #ffbde8;
+}
+
+.ntslabel:hover {
+	background-color: #ffe4f5;
+}
+
+.nts_radiowrap {
+	display: inline-block;
+	margin: 0 0 5px 0;
+}
