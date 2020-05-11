@@ -8,7 +8,7 @@
 のPOTI-boardをphp7で使えるように改造した
 
 POTI-boardv1.32.12 lot.180130
-https://sakots.red/poti/
+https://poti-k.info/
 
 以降に対応したテンプレートです。
 
@@ -26,7 +26,7 @@ MONO WHITEと、Cool Solid ( 黒鋼彗牙さん作・ https://draclaw.com )を�
 
 ■アップロード
 
-POTI-board改とテンプレートシリーズ https://sakots.red/poti/
+POTI改公式サイト https://poti-k.info/
 
 から、POTI-board改をダウンロードし、設置ディレクトリにアップロードします。
 
