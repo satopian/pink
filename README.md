@@ -23,7 +23,7 @@ BBSNoteのようなレイアウト。
 
 ## このテンプレートを使うために必要なもの
 
-お絵かき掲示板のスクリプト本体、[POTI-board改](https://poti-k.info/)をダウンロードします。
+お絵かき掲示板のスクリプト本体、[POTI-board改](https://github.com/sakots/poti-kai)をダウンロードします。
 [PaintBBS NEO](https://github.com/funige/neo)をダウンロードします。
 必要なファイルは、neo/dist/の**neo.css**と、**neo.js**の2つです。
 
