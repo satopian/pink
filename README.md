@@ -2,6 +2,9 @@
 
 [お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
+[POTI-board改二](https://github.com/sakots/poti-kaini)用は[こちら](https://github.com/satopian/pink_for_poti-kaini)。
+改と改二のテンプレートの互換性はありません。
+
 ### 設置サンプル
 
 [POTI-board用テンプレート PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
@@ -20,7 +23,7 @@ BBSNoteのようなレイアウト。
 
 ## このテンプレートを使うために必要なもの
 
-お絵かき掲示板のスクリプト本体、[POTI-board改](https://poti-k.info/)をダウンロードします。
+お絵かき掲示板のスクリプト本体、[POTI-board改](https://github.com/sakots/poti-kai)をダウンロードします。
 [PaintBBS NEO](https://github.com/funige/neo)をダウンロードします。
 必要なファイルは、neo/dist/の**neo.css**と、**neo.js**の2つです。
 
