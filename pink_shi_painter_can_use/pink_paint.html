@@ -48,13 +48,12 @@ document.paintBBSCallback = function (str) {
 <!--{/def}-->
 <!--( Javaが使えるかどうか判定 )-->
 <!--{ndef paintbbs}-->
-<!--(
 <script>
 function cheerpJLoad() {
 var jEnabled = navigator.javaEnabled();
 if(!jEnabled){
 var sN = document.createElement("script");
-sN.src = "https://cjrtnc.leaningtech.com/20190103/loader.js";
+sN.src = "https://cjrtnc.leaningtech.com/latest/loader.js";
 var s0 = document.getElementsByTagName("script")[0];
 s0.parentNode.insertBefore(sN, s0);
 sN.addEventListener("load", function(){ cheerpjInit(); }, false);
@@ -62,7 +61,6 @@ sN.addEventListener("load", function(){ cheerpjInit(); }, false);
 }
 window.addEventListener("load", function() { cheerpJLoad(); }, false);
 </script>
-)-->
 <!--{/ndef}-->
 </head>
 <body>
@@ -412,9 +410,8 @@ timerID=10;stime=new Date;function SetTimeCount(){now=new Date;s=Math.floor((now
     <!--(========== クッキー読込み用JavaScript(必須) ==========)-->
     <Script language="JavaScript" src="loadcookie.js"></script>
     <!--(========== 画像と描画時間 ==========)-->
- 	<div class="continue_img"><a href="{$self}?res={$no}">
+ 	<div class="continue_img">
 <img src="{$picfile}" width="{$picw}" height="{$pich}" alt="{$picw}x{$pich} {$title}" title="{$picw}x{$pich} {$title}">
-</a>
    </div>
     <div class="continue_painttime"><!--{def painttime}-->描画時間：{$painttime}<!--{/def}--></div>
     <!--(========== コンティニューフォーム欄 ==========)-->
