@@ -167,6 +167,7 @@ pe[n]}}function GradView(a,f){d=document}function showHideLayer(){d=document;var
 <!--{def useneo}--><APPLET-DUMMY <!--{/def}-->
 <!--{ndef useneo}--><APPLET<!--{/ndef}-->
  CODE="pbbs.PaintBBS.class" ARCHIVE="./PaintBBS.jar" NAME="paintbbs" WIDTH="{$w}" HEIGHT="{$h}" MAYSCRIPT>
+<param name="neo_confirm_unload" value="true">
 <!--{/def}-->
 <!--(========== しぃペインター個別設定 ==========)-->
 <!--{def normal}-->
@@ -346,7 +347,7 @@ timerID=10;stime=new Date;function SetTimeCount(){now=new Date;s=Math.floor((now
 <!--(<div id="mode_head">動画表示モード</div>)-->
 <!--{def pch_mode}-->
 	</header>
-<div class="pch_animation">
+<div class="appstage">
 <!--{def paintbbs}-->
 <APPLET-DUMMY name="pch" code="pch.PCHViewer.class" archive="PCHViewer.jar,PaintBBS.jar" width="{$w}" height="{$h}" MAYSCRIPT>
 <!--{/def}-->
