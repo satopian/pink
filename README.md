@@ -1,13 +1,13 @@
 # POTI-board用テンプレートPINK
 
-[お絵かき掲示板](https://pbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
+[お絵かき掲示板](https://paintbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
 [POTI-board改二](https://github.com/sakots/poti-kaini)用は[こちら](https://github.com/satopian/pink_for_poti-kaini)。
 改と改二のテンプレートの互換性はありません。
 
 ### 設置サンプル
 
-[POTI-board用テンプレート PINK 設置サンプル](https://pbbs.sakura.ne.jp/cgi/neosample/poti/)
+[POTI-board用テンプレート PINK 設置サンプル](https://paintbbs.sakura.ne.jp/cgi/neosample/poti/)
 
 ### 特徴
 
