@@ -2,7 +2,7 @@
 
 [お絵かき掲示板](https://paintbbs.sakura.ne.jp/)交流サイトで使っているテンプレートを一般配布用にカスタマイズしたものです。
 
-[POTI-board改二](https://github.com/sakots/poti-kaini)用は[こちら](https://github.com/satopian/pink_for_poti-kaini)。
+[POTI-board改二](https://github.com/satopian/poti-kaini)用は[こちら](https://github.com/satopian/pink_for_poti-kaini)。
 改と改二のテンプレートの互換性はありません。
 
 ### 設置サンプル
@@ -23,7 +23,7 @@ BBSNoteのようなレイアウト。
 
 ## このテンプレートを使うために必要なもの
 
-お絵かき掲示板のスクリプト本体、[POTI-board改](https://github.com/sakots/poti-kai)をダウンロードします。
+お絵かき掲示板のスクリプト本体、[POTI-board改](https://github.com/satopian/poti-kai)をダウンロードします。
 [PaintBBS NEO](https://github.com/funige/neo)をダウンロードします。
 必要なファイルは、neo/dist/の**neo.css**と、**neo.js**の2つです。
 
@@ -97,7 +97,7 @@ NEOのみのテンプレートにはこの機能はありません。
 
 #### [2019/09/24] PINK lot.190924
 
-- [POTI-board改](https://poti-k.info/) v1.53.5 lot.190921 で追加された新しい機能に対応。
+- [POTI-board改](https://paintbbs.sakura.ne.jp/poti/) v1.53.5 lot.190921 で追加された新しい機能に対応。
 - スマートフォンやタブレットで大きなキャンバスを開いた時にピンチインで縮小表示できるようになりました。
 #### [2019/08/16] PINK lot.190816
 
